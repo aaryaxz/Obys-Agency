@@ -20,6 +20,7 @@ tl.from(".counter",{
 },"=-2")
 
 
+
 tl.from(".preloaderPara",{
     opacity:0,
     duration:.5,
@@ -33,5 +34,10 @@ tl.to(".preloader-content",{
 tl.to(".preloader",{
     yPercent:-100,
     delay:0.5,
-    ease:"sin.out"
+    ease:"sin.out",
+    onended:function(){
+        gsap.to(".preloader",{
+            display:"none"
+        })
+    }
 })
