@@ -1,0 +1,16 @@
+@font-face {
+    font-family: plain-light;
+    src: url(Assets/Fonts/plain-light-webfont.ttf);
+}
+@font-face {
+    font-family: plain-regular;
+    src: url(Assets/Fonts/plain-regular-webfont.ttf);
+}
+@font-face {
+    font-family:silkserif-light;
+    src: url(Assets/Fonts/silkserif-lightitalic-webfont.ttf);
+}
+@font-face {
+    font-family: silkserif-regular;
+    src: url(Assets/Fonts/silkserif-regularitalic-webfont.ttf);
+}
