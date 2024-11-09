@@ -1,9 +1,19 @@
 function preloaderAnimation(){
     var tl = gsap.timeline()
+
+    // ph - responsiveness for smaller screen
+    // lp - responsiveness for wider screnn 
+    const phStagger = .5
+    const lpStagger = .2
+    const lpDuration = 0.5
+    const phDuration = .7
+    const yValueOnLp = 200
+    const yValueOnPh = 100
+
     tl.from(".lines h1,h2",  {
-        y: 100,
-        duration: 0.5,
-        stagger: 0.2,
+        y: window.innerWidth>=2000?yValueOnLp:yValueOnPh,
+        duration: window.innerWidth>768?lpDuration:phDuration,
+        stagger: window.innerWidth>768?lpStagger:phStagger,
     })
     
     

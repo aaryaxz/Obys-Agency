@@ -9,6 +9,10 @@ html, body {
     height: 100%;
 }
 
+:root{
+    --stroke-width:2px;
+}
+
 .line3 h2{
     animation: font-flash 1.2s 3;
 }
@@ -38,7 +42,7 @@ html, body {
     50% {
         font-family: "silkserif-light";
         opacity: 1;
-        -webkit-text-stroke: 2px #fff;
+        -webkit-text-stroke: var(--stroke-width) #fff;
         color: transparent;
 
     }
@@ -46,7 +50,7 @@ html, body {
     80% {
         font-family:  "silkserif-light";
         opacity: 1;
-        -webkit-text-stroke: 2px #fff;
+        -webkit-text-stroke: var(--stroke-width) #fff;
         color: transparent;
 
     }
@@ -54,8 +58,14 @@ html, body {
     100% {
         font-family:  "silkserif-light";
         opacity: 0;
-        -webkit-text-stroke: 2px #fff;
+        -webkit-text-stroke: var(--stroke-width) #fff;
         color: transparent;
 
+    }
+}
+
+@media (max-width:768px) {
+    :root{
+        --stroke-width:0.5px;
     }
 }
