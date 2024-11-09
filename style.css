@@ -9,6 +9,14 @@ html, body {
     height: 100%;
 }
 
+body{
+    cursor: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
 :root{
     --stroke-width:2px;
 }

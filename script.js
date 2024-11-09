@@ -15,18 +15,22 @@ function preloaderAnimation(){
 
     // ph - responsiveness for smaller screen
     // lp - responsiveness for wider screnn 
-    const phStagger = .5
-    const lpStagger = .2
-    const lpDuration = 0.5
-    const phDuration = .7
-    const yValueOnLp = 200
-    const yValueOnPh = 100
+    var phStagger = .5
+    var lpStagger = .2
+    var lpDuration = 0.5
+    var phDuration = .7
+    var yValueOnLp = 200
+    var yValueOnPh = 110
 
-    tl.from(".lines h1,h2",  {
-        y: window.innerWidth>=2000?yValueOnLp:yValueOnPh,
-        duration: window.innerWidth>768?lpDuration:phDuration,
-        stagger: window.innerWidth>768?lpStagger:phStagger,
+    function animateHeroHeader(selector){
+        tl.from(selector,{
+        y: window.innerWidth >= 2000 ? yValueOnLp : yValueOnPh,
+        duration: window.innerWidth > 768 ? lpDuration : phDuration,
+        stagger: window.innerWidth > 768 ? lpStagger : phStagger,
     })
+    }
+
+    animateHeroHeader('.lines h1,h2')
     
     
     tl.from(".counter",{
@@ -66,6 +70,12 @@ function preloaderAnimation(){
 
         }
     })
+    tl.from(".nav svg,.nav p,.nav a",{
+        dealy:.5,
+        opacity:0,
+        y:-20,
+    })
+    animateHeroHeader(".hero-header h1")
 }
 preloaderAnimation()
 
