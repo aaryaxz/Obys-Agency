@@ -1,4 +1,16 @@
+function disableScroll() {
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+}
+
+function enableScroll() {
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
+}
+
+
 function preloaderAnimation(){
+    disableScroll()
     var tl = gsap.timeline()
 
     // ph - responsiveness for smaller screen
@@ -50,11 +62,12 @@ function preloaderAnimation(){
             gsap.to(".preloader",{
                 display:"none"
             })
+            enableScroll()
+
         }
     })
 }
 preloaderAnimation()
-
 
 var cursor = document.querySelector(".cursor")
 document.addEventListener("mousemove",function(dets){
