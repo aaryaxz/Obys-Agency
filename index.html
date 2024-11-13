@@ -2,52 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obys Agency</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="font.css">
-    <link rel="shortcut icon" href="Assets/Images/obys-Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="font.css" />
+    <link rel="shortcut icon" href="Assets/Images/obys-Icon.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
 </head>
 
 <body>
     <div
-        class="cursor w-[2.7vw] h-[2.7vw]  hidden md:block rounded-full border border-2 border-zinc-400 fixed top-0 left-0 mix-blend-difference translate-x-[-50%] translate-y-[-50%] z-[99]">
+        class="cursor w-[2.7vw] h-[2.7vw] hidden md:block pointer-events-none rounded-full border-[1.5px] border-zinc-400 fixed top-0 left-0 mix-blend-difference translate-x-[-50%] translate-y-[-50%] z-[99]">
     </div>
     <div
         class="preloader w-full h-screen bg-[#0B0B0B] fixed top-0 left-0 z-[999] 2xl:py-[8vw] lg:py-[20vw] py-[0vw] px-[5vw]">
-        <div class="preloader-content text-white absolute lg:static  top-[35%] lg:top[0%] ">
+        <div class="preloader-content text-white absolute lg:static top-[35%] lg:top[0%]">
             <div
-                class="line1 lines overflow-hidden flex lg:flex-row flex-col  lg:justify-start lg:gap-20 gap-[2vw]  leading-[9vw] lg:leading-none ">
-                <div class="counter lg:ml-32 lg:mt-2 flex lg:gap-3 gap-2 ">
+                class="line1 lines overflow-hidden flex lg:flex-row flex-col lg:justify-start lg:gap-20 gap-[2vw] leading-[9vw] lg:leading-none">
+                <div class="counter lg:ml-32 lg:mt-2 flex lg:gap-3 gap-2">
                     <span
-                        class="counter-number1 font-[silkserif-light] text-[6vw] lg:text-[3vw] text-right lg:w-[5vw] w-[9vw]  ">00</span>
+                        class="counter-number1 font-[silkserif-light] text-[6vw] lg:text-[3vw] text-right lg:w-[5vw] w-[9vw]">00</span>
                     <span class="counter-number2 font-[silkserif-light] text-[6vw] lg:text-[3vw]">- 100</span>
                 </div>
-                <h1 class="font-[plain-regular] text-[7.7vw] lg:text-[7.3vw] uppercase ">Your</h1>
+                <h1 class="font-[plain-regular] text-[7.7vw] lg:text-[7.3vw] uppercase">
+                    Your
+                </h1>
             </div>
             <div class="line2 lines overflow-hidden leading-[9vw] lg:leading-none">
-                <h1 class="font-[plain-regular] text-[7.7vw] lg:text-[7.3vw] uppercase">Web Expreience</h1>
+                <h1 class="font-[plain-regular] text-[7.7vw] lg:text-[7.3vw] uppercase">
+                    Web Expreience
+                </h1>
             </div>
             <div class="line3 lines overflow-hidden leading-[9vw] lg:leading-none flex lg:gap-6">
-                <h1 class="font-[plain-regular] text-[7.7vw] lg:text-[7.3vw] uppercase">Is loading right</h1>
-                <div class="line4 lines overflow-hidden  flex flex-col lg:px-4 px-2">
-                    <h2 class="font-[plain-regular] text-[7.7vw] lg:text-[7.3vw] uppercase "> Now</h2>
+                <h1 class="font-[plain-regular] text-[7.7vw] lg:text-[7.3vw] uppercase">
+                    Is loading right
+                </h1>
+                <div class="line4 lines overflow-hidden flex flex-col lg:px-4 px-2">
+                    <h2 class="font-[plain-regular] text-[7.7vw] lg:text-[7.3vw] uppercase">
+                        Now
+                    </h2>
                 </div>
             </div>
             <div class="preloaderPara h-fit w-fit lg:px-[22vw] lg:pt-[5vw] pt-[10vw]">
-                <p class=" w-[60%] lg:w-[53%] text-[16px] lg:text-[17px] leading-[1.2] ">Please wait a few seconds.</p>
+                <p class="w-[60%] lg:w-[53%] text-[16px] lg:text-[17px] leading-[1.2]">
+                    Please wait a few seconds.
+                </p>
             </div>
         </div>
     </div>
     <main class="main w-full">
-        <section class="landing-page h-screen w-full bg-[#151515] text-white ">
-            <div class="nav px-[4.3vw] px-[5vw] md:py-[3.5vw] py-[6vw] flex  md:gap-[20vw] justify-between">
-                <div class="navPart1 md:hidden">
-                    hello
-                </div>
-                <div class="navPart2  ">
+        <section class="landing-page h-screen w-full bg-[#151515] text-white">
+            <div class="nav px-[4.3vw] px-[5vw] md:py-[3.5vw] py-[6vw] flex md:gap-[20vw] justify-between">
+                <div class="navPart1 md:hidden">hello</div>
+                <div class="navPart2">
                     <svg class="brand__svg md:w-[71px] w-[fit-content] md:h-[27px] h-[23px]" viewBox="0 0 71 27 ">
                         <path
                             d="M40.7622 24.5917C40.7622 23.6724 41.4511 22.9829 42.3697 22.9829C43.2883 22.9829 43.9773 23.6724 43.9773 24.5917C43.9773 25.511 43.2883 26.2005 42.3697 26.2005C41.566 26.2005 40.7622 25.3961 40.7622 24.5917Z"
@@ -88,36 +97,43 @@
                     <p>Design</p>
                     <p>Agency</p>
                 </div>
-                <div class="navPart4 lg:ml-[27vw]  flex gap-10 font-[plain-light] text-[1vw] hidden md:flex">
+                <div class="navPart4 lg:ml-[27vw] h-fit flex gap-10 font-[plain-light] text-[1vw] hidden md:flex">
                     <a href="#">Works</a>
                     <a href="#">About</a>
                     <a href="#">Contacts</a>
-
                 </div>
             </div>
-            <div class="hero-section  w-full h-screen realtive z-10 pt-[7vw]">
-                <div class="text-container  w-[70%] absolute right-0">
+            <div class="hero-section w-full h-screen realtive z-10 pt-[7vw] ">
+                <div class="text-container w-[70%]  absolute right-0">
                     <div class="hero-header overflow-hidden">
-                        <h1 class="text-[7.3vw] font-[plain-regular] leading-none uppercase">We Design</h1>
+                        <h1 class="text-[7.3vw] font-[plain-regular] leading-none uppercase">
+                            We Design
+                        </h1>
                     </div>
                     <div class="hero-header overflow-hidden">
-                        <h1 class="text-[7.3vw] font-[plain-regular] leading-none uppercase">Unique</h1>
+                        <h1 class="text-[7.3vw] font-[plain-regular] leading-none uppercase">
+                            Unique
+                        </h1>
                     </div>
-                    <div class="hero-header overflow-hidden flex ">
+                    <div class="hero-header  overflow-hidden flex">
                         <h1
-                            class="text-[7.3vw] font-[plain-regular] leading-none uppercase border-b-[.7vw] border-white">
-                            Web<span class="bg-[#151515] pl-2 text-right">/</span></h1>
+                            class="text-[7.3vw] font-[plain-regular] leading-none uppercase border-b-[.6vw] border-white">
+                            Web
+                        </h1>
+                       <span class=" text-[7.3vw] font-[plain-regular] leading-none uppercase border-b-[.6vw] border-[#151515] pl-2 text-right">/</span>
                         <h1
-                            class="text-[7.3vw] font-[plain-regular] leading-none uppercase border-b-[.7vw] border-white  translate-x-[-18px] px-4">
-                            Graphic</h1>
+                            class="text-[7.3vw] font-[plain-regular] leading-none uppercase border-b-[.6vw] border-white translate-x-[-18px] px-4">
+                            Graphic
+                        </h1>
                     </div>
                     <div class="hero-header overflow-hidden">
-                        <h1 class="text-[7.3vw]  font-[plain-regular] leading-none uppercase">Expreience</h1>
+                        <h1 class="text-[7.3vw] font-[plain-regular] leading-none uppercase">
+                            Expreience
+                        </h1>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -126,6 +142,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     <script src="script.js"></script>
 </body>
 
