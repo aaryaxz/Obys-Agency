@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="font.css" />
     <link rel="shortcut icon" href="Assets/Images/obys-Icon.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
 </head>
 
-<body>
+<body class="bg-[#151515] ">
     <div
         class="cursor w-[2.7vw] h-[2.7vw] hidden md:block pointer-events-none rounded-full border-[1.5px] border-zinc-400 fixed top-0 left-0 mix-blend-difference translate-x-[-50%] translate-y-[-50%] z-[99]">
     </div>
@@ -52,8 +53,8 @@
             </div>
         </div>
     </div>
-    <main class="main w-full">
-        <section class="landing-page h-screen w-full bg-[#151515] text-white">
+    <main class="main w-full ">
+        <section class="landing-page h-screen w-full  text-white">
             <div class="nav px-[4.3vw] px-[5vw] md:py-[3.5vw] py-[6vw] flex md:gap-[20vw] justify-between">
                 <div class="navPart1 md:hidden">hello</div>
                 <div class="navPart2">
@@ -103,34 +104,49 @@
                     <a href="#">Contacts</a>
                 </div>
             </div>
-            <div class="hero-section w-full h-screen realtive z-10 pt-[7vw] ">
-                <div class="text-container w-[70%]  absolute right-0">
+            <div class="hero-section w-full md:h-[90vh] h-fit relative z-10 md:pt-[5vw] py-[27vw] md:py-[0vw]  md:px-[0vw] px-[5vw] ">
+                <div class="pageNumber absolute md:left-[20%] bottom-[73%] md:bottom-[unset] text-[5vw] font-[silkserif-regular] md:text-[3.3vw] md:font-[silkserif-light]">01</div>
+                <div class="text-container md:w-[70%] w-full md:pt-[.2vw] md:absolute md:right-0 static">
                     <div class="hero-header overflow-hidden">
-                        <h1 class="text-[7.3vw] font-[plain-regular] leading-none uppercase">
+                        <h1 class="md:text-[7.3vw] text-[10vw] font-[plain-regular] leading-none uppercase tracking-[-.10rem] md:tracking-normal">
                             We Design
                         </h1>
                     </div>
                     <div class="hero-header overflow-hidden">
-                        <h1 class="text-[7.3vw] font-[plain-regular] leading-none uppercase">
+                        <h1 class="md:text-[7.3vw] text-[10vw] font-[plain-regular] leading-none uppercase tracking-[-.10rem] md:tracking-normal">
                             Unique
                         </h1>
                     </div>
                     <div class="hero-header  overflow-hidden flex">
                         <h1
-                            class="text-[7.3vw] font-[plain-regular] leading-none uppercase border-b-[.6vw] border-white">
+                            class="md:text-[7.3vw] text-[10vw] font-[plain-regular] leading-none uppercase md:border-b-[.6vw] border-b-[1.2vw] border-white tracking-[-.10rem] md:tracking-normal">
                             Web
                         </h1>
-                       <span class=" text-[7.3vw] font-[plain-regular] leading-none uppercase border-b-[.6vw] border-[#151515] pl-2 text-right">/</span>
+                        <span
+                            class=" md:text-[7.3vw] text-[10vw] font-[plain-regular] leading-none uppercase md:border-b-[.6vw] border-b-[1.2vw] border-[#151515] pl-2 text-right">/</span>
                         <h1
-                            class="text-[7.3vw] font-[plain-regular] leading-none uppercase border-b-[.6vw] border-white translate-x-[-18px] px-4">
+                            class="md:text-[7.3vw] text-[10vw] font-[plain-regular] leading-none uppercase md:border-b-[.6vw] border-b-[1.2vw] border-white md:translate-x-[-18px] translate-x-[0px] md:px-4 px-0 tracking-[-.10rem] md:tracking-normal">
                             Graphic
                         </h1>
                     </div>
                     <div class="hero-header overflow-hidden">
-                        <h1 class="text-[7.3vw] font-[plain-regular] leading-none uppercase">
+                        <h1 class="md:text-[7.3vw] text-[10vw] font-[plain-regular] leading-none uppercase tracking-[-.10rem] md:tracking-normal">
                             Expreience
                         </h1>
                     </div>
+                </div>
+            </div>
+            <div class="video-container  w-full h-fit relative top-0 left-0 pt-[5vw]  ">
+                <div class="video-container-inner overflow-hidden md:w-[71vw] w-full h-[50vh] md:h-[70vh] absolute top-0 md:top[unset] md:right-0 ">
+                    <div
+                        class="video-cursor md:w-[10vw] w-[25vw] md:h-[10vw] h-[25vw]  flex items-center justify-center rounded-full bg-[#FFA63D] absolute z-[100] md:bottom-[90%] top-[50%] md:left-[70%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                        <i class="ri-play-fill md:text-[2.6vw] text-[5vw]"></i>
+                    </div>
+                    <img src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg"
+                        class="absolute md:top-0 md:left-0 w-full h-full object-cover scale-[1.2] " alt="">
+                    <video class="w-full h-full object-cover "
+                        src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4" loop muted
+                        autoplay></video>
                 </div>
             </div>
         </section>

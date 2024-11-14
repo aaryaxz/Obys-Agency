@@ -14,19 +14,31 @@ function preloaderAnimation() {
 
     // ph - responsiveness for smaller screen
     // lp - responsiveness for wider screnn
-    var phStagger = 0.5;
-    var lpStagger = 0.1;
+    var phStagger = 0.2;
+    var lpStagger = 0.3;
     var lpDuration = 0.5;
     var phDuration = 0.7;
     var yValueOnLp = 200;
     var yValueOnPh = 110;
 
     function animateHeroHeader(selector) {
-        tl.from(selector, {
-            y: window.innerWidth >= 2000 ? yValueOnLp : yValueOnPh,
-            duration: window.innerWidth > 768 ? lpDuration : phDuration,
-            stagger: window.innerWidth > 768 ? lpStagger : phStagger,
-        });
+        tl.from(
+            selector,
+            {
+                y: window.innerWidth >= 2000 ? yValueOnLp : yValueOnPh,
+                duration: window.innerWidth > 768 ? lpDuration : phDuration,
+                stagger:
+                    selector === ".hero-header h1,.hero-header span"
+                        ? 0.1
+                        : window.innerWidth > 768
+                            ? lpStagger
+                            : phStagger,
+            },
+            window.innerWidth <= 768 &&
+                selector === ".hero-header h1,.hero-header span"
+                ? "-=.9"
+                : null
+        );
     }
 
     animateHeroHeader(".lines h1,h2");
@@ -60,7 +72,7 @@ function preloaderAnimation() {
     });
     tl.to(".preloader", {
         yPercent: -100,
-        delay: 0.5,
+        delay: window.innerWidth >= 768 ? 0.3: 0.3,
         ease: "sin.out",
         onended: function () {
             gsap.to(".preloader", {
@@ -69,12 +81,24 @@ function preloaderAnimation() {
             enableScroll();
         },
     });
-    tl.from(".nav svg,.nav p,.nav a", {
-        dealy: 0.5,
-        opacity: 0,
-        y: -20,
-    });
+
+    tl.from(
+        ".nav svg,.nav p,.nav a",
+        {
+            dealy: 0.5,
+            opacity: 0,
+            y: -20,
+        },
+        "-=.2"
+    );
+
     animateHeroHeader(".hero-header h1,.hero-header span");
+    
+    tl.from(".pageNumber",{
+        opacity:0,
+        duration:.5,
+    },"-=1")
+
 }
 preloaderAnimation();
 

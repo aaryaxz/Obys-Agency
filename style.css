@@ -25,13 +25,15 @@ body{
     animation: font-flash 1.2s 3;
 }
 
-.text-container::before{
+/* .text-container::before{
     position: absolute;
     left: -15%;
     content: "01";
     font-family: silkserif-light;
     font-size: 3.3vw;    
-}
+} */
+
+
 
 .hero-header:nth-child(3) h1{
     transition: color .5s, -webkit-text-stroke 0.5s ,border-color 0.5s;
@@ -95,4 +97,5 @@ body{
     :root{
         --stroke-width:0.5px;
     }
+
 }
