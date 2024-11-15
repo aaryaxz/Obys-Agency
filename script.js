@@ -102,40 +102,44 @@ function preloaderAnimation() {
 }
 preloaderAnimation();
 
-var cursor = document.querySelector(".cursor");
-var links = document.querySelectorAll(".navPart4 a");
-document.addEventListener("mousemove", function (dets) {
-    gsap.to(cursor, {
-        left: dets.x,
-        top: dets.y,
-        ease: "expo.out",
-    });
-});
 
-links.forEach(function (link) {
-    const dims = link.getBoundingClientRect();
-    var x1 = dims.x;
-    var x2 = x1 + dims.width;
-    var y1 = dims.y;
-    var y2 = y1 + dims.height;
-    link.addEventListener("mousemove", function (dets) {
-        var moveX = gsap.utils.mapRange(x1, x2, -15, 15, dets.clientX);
-        var moveY = gsap.utils.mapRange(y1, y2, -12, 15, dets.clientY);
+function cursorAnimation(){
+    var cursor = document.querySelector(".cursor");
+    var links = document.querySelectorAll(".navPart4 a");
+    document.addEventListener("mousemove", function (dets) {
         gsap.to(cursor, {
-            scale: 1.2,
-        });
-        gsap.to(link, {
-            x: moveX,
-            y: moveY,
+            left: dets.x,
+            top: dets.y,
+            ease: "expo.out",
         });
     });
-    link.addEventListener("mouseleave", function () {
-        gsap.to(cursor, {
-            scale: 1,
+    
+    links.forEach(function (link) {
+        const dims = link.getBoundingClientRect();
+        var x1 = dims.x;
+        var x2 = x1 + dims.width;
+        var y1 = dims.y;
+        var y2 = y1 + dims.height;
+        link.addEventListener("mousemove", function (dets) {
+            var moveX = gsap.utils.mapRange(x1, x2, -15, 15, dets.clientX);
+            var moveY = gsap.utils.mapRange(y1, y2, -12, 15, dets.clientY);
+            gsap.to(cursor, {
+                scale: 1.2,
+            });
+            gsap.to(link, {
+                x: moveX,
+                y: moveY,
+            });
         });
-        gsap.to(link, {
-            x: 0,
-            y: 0,
+        link.addEventListener("mouseleave", function () {
+            gsap.to(cursor, {
+                scale: 1,
+            });
+            gsap.to(link, {
+                x: 0,
+                y: 0,
+            });
         });
     });
-});
+}
+cursorAnimation()
