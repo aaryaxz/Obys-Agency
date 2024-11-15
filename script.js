@@ -100,7 +100,7 @@ function preloaderAnimation() {
     },"-=1")
 
 }
-preloaderAnimation();
+// preloaderAnimation();
 
 
 function cursorAnimation(){
