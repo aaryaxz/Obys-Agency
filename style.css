@@ -25,15 +25,10 @@ body{
     animation: font-flash 1.2s 3;
 }
 
-/* .text-container::before{
-    position: absolute;
-    left: -15%;
-    content: "01";
-    font-family: silkserif-light;
-    font-size: 3.3vw;    
-} */
-
-
+.marquee-content h1{
+    -webkit-text-stroke: 1px white;
+    
+}
 
 .hero-header:nth-child(3) h1{
     transition: color .5s, -webkit-text-stroke 0.5s ,border-color 0.5s;
@@ -45,6 +40,22 @@ body{
     border-color: #151515;
 }
 
+.marquee-content {
+    animation: marquee-animation infinite linear 20s;
+}
+.marquee-content-2{
+    animation: marquee-animation infinite linear 40s;
+    animation-direction: reverse;
+}
+
+@keyframes marquee-animation {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
 
 @keyframes font-flash {
     0% {
