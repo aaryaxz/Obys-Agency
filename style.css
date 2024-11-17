@@ -40,22 +40,25 @@ body{
     border-color: #151515;
 }
 
-.marquee-content {
-    animation: marquee-animation infinite linear 20s;
+
+
+.marquee-content{
+    animation: marquee-animation 40s linear infinite;
 }
 .marquee-content-2{
-    animation: marquee-animation infinite linear 40s;
+    animation: marquee-animation 40s linear infinite;
     animation-direction: reverse;
 }
 
 @keyframes marquee-animation {
-    from{
+    0% {
         transform: translateX(0%);
     }
-    to{
-        transform: translateX(-100%);
+    100% {
+        transform: translateX(-200%);
     }
 }
+
 
 @keyframes font-flash {
     0% {
