@@ -14,3 +14,11 @@
     font-family: silkserif-regular;
     src: url(Assets/Fonts/silkserif-regularitalic-webfont.ttf);
 }
+@font-face {
+    font-family: helvetica-regular;
+    src: url(Assets/Fonts/HelveticaNowText-Regular.ttf);
+}
+@font-face {
+    font-family: helvetica-bold;
+    src: url(Assets/Fonts/Helvetica-Bold-Font.ttf);
+}
