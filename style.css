@@ -43,10 +43,10 @@ body{
 
 
 .marquee-content{
-    animation: marquee-animation 40s linear infinite;
+    animation: marquee-animation 60s linear infinite;
 }
 .marquee-content-2{
-    animation: marquee-animation 40s linear infinite;
+    animation: marquee-animation 60s linear infinite;
     animation-direction: reverse;
 }
 
