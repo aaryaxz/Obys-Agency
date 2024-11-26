@@ -16,7 +16,7 @@ function preloaderAnimation() {
     // lp - responsiveness for wider screnn
     var phStagger = 0.2;
     var lpStagger = 0.3;
-    var lpDuration = 0.5;
+    var lpDuration = .7;
     var phDuration = 0.7;
     var yValueOnLp = 200;
     var yValueOnPh = 110;
@@ -25,7 +25,7 @@ function preloaderAnimation() {
         tl.from(
             selector,
             {
-                y: window.innerWidth >= 2000 ? yValueOnLp : yValueOnPh,
+                yPercent: window.innerWidth >= 2000 ? yValueOnLp : yValueOnPh,
                 duration: window.innerWidth > 768 ? lpDuration : phDuration,
                 stagger:
                     selector === ".hero-header h1,.hero-header span"
@@ -57,18 +57,18 @@ function preloaderAnimation() {
                 }, 35);
             },
         },
-        "=-2"
+        "-=6"
     );
 
     tl.from(".preloaderPara", {
         opacity: 0,
         duration: 0.5,
-    });
+    },window.innerWidth >= 768 ? "-=3.6" : "-=2.8");
 
     tl.to(".preloader-content", {
         opacity: 0,
-        delay: 2,
-        duration: 1.7,
+        delay:window.innerWidth >= 768 ? 0 : .6,
+        duration: .9,
     });
     tl.to(".preloader", {
         yPercent: -100,
@@ -100,7 +100,7 @@ function preloaderAnimation() {
     },"-=1")
 
 }
-// preloaderAnimation();
+preloaderAnimation();
 
 
 function cursorAnimation(){
