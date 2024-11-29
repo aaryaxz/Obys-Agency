@@ -1,12 +1,21 @@
-function disableScroll() {
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
-}
 
-function enableScroll() {
-    document.body.style.overflow = "";
-    document.documentElement.style.overflow = "";
-}
+const locomotiveScroll = new LocomotiveScroll();
+
+
+// function disableScroll() {
+//     // Get the current lo scroll position
+//     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//     const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+//     // if any scroll is attempted, set this to the previous value
+//     window.onscroll = function() {
+//         window.scrollTo(scrollLeft, scrollTop);
+//     };
+// }
+
+// function enableScroll() {
+//     window.onscroll = function() {};
+// }
 
 function preloaderAnimation() {
     disableScroll();
@@ -74,18 +83,18 @@ function preloaderAnimation() {
         yPercent: -100,
         delay: window.innerWidth >= 768 ? 0.3: 0.3,
         ease: "sin.out",
-        onended: function () {
+        onComplete: function () {
             gsap.to(".preloader", {
                 display: "none",
             });
-            enableScroll();
+            enableScroll()
         },
     });
 
     tl.from(
         ".nav svg,.nav p,.nav a",
         {
-            dealy: 0.5,
+            delay: 0.5,
             opacity: 0,
             y: -20,
         },

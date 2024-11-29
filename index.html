@@ -54,7 +54,7 @@
         </div>
     </div>
     <main class="main w-full ">
-        <section class="landing-page min-h-screen  w-full  text-white">
+        <section data-scroll class="landing-page min-h-screen  w-full  text-white">
             <div
                 class="nav px-[4.3vw] px-[5vw] xl:py-[3.5vw] md:py-[2.5vw] py-[6vw] flex xl:gap-[20vw]  justify-between">
                 <div class="navPart1 md:hidden">hello</div>
@@ -107,8 +107,7 @@
                     <a href="#">Contacts</a>
                 </div>
             </div>
-            <div
-                class="hero-section w-full xl:h-[90vh] h-fit relative z-10 xl:pt-[5vw] md:pt-[10vw] md:pb-[45vw] py-[27vw] md:py-[0vw]  md:px-[0vw] px-[5vw] ">
+            <div data-scroll data-scroll-speed=".3" class="hero-section  w-full xl:h-[80vh] h-fit relative z-10 xl:pt-[5vw] md:pt-[10vw] md:pb-[45vw] xl:pb-[0vw] py-[27vw] md:py-[0vw]  md:px-[0vw] px-[5vw] ">
                 <div
                     class="pageNumber absolute md:left-[18%] xl:left-[20%] bottom-[73%] md:bottom-[unset] text-[5vw] font-[silkserif-regular] md:text-[3.6vw] xl:text-[3.3vw] md:font-[silkserif-light]">
                     01</div>
@@ -145,8 +144,7 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="video-container  w-full  xl:h-screen  relative xl:pt-[0vw] md:pt-[8vw] md:pb-[50vw] xl:pb-[0vw]">
+            <div  class="video-container  w-full  xl:h-screen  relative xl:pt-[0vw] md:pt-[8vw] md:pb-[50vw] xl:pb-[0vw]">
                 <div
                     class="video-container-inner overflow-hidden md:overflow-visible md:w-[71vw] w-full h-[40vh] md:h-fit xl:h-[70vh] absolute  md:top[unset] xl:right-0 md:right-[3.6%] z-[50]">
                     <div class="video-cursor xl:w-[10vw] md:w-[13vw] w-[25vw] xl:h-[10vw]  md:h-[13vw] h-[25vw]  flex items-center justify-center rounded-full bg-[#FFA63D] absolute md:top-[-1%] xl:top-[-5%] top-[50%] 
@@ -162,9 +160,9 @@
                 </div>
             </div>
         </section>
-        <section class="our-projects-page min-h-screen w-full bg-zinc-600 md:mb-[25vw] xl:mb-[15vw]"></section>
+        <section data-scroll class="our-projects-page min-h-screen w-full bg-zinc-600 md:mb-[25vw] xl:mb-[15vw]"></section>
 
-        <section class="about-page min-h-screen w-full  pt-[14vw] md:pt-[0vw] relative text-white">
+        <section data-scroll class="about-page min-h-screen w-full  pt-[14vw] md:pt-[0vw] relative text-white">
             <div
                 class="pageNumber absolute md:left-[18%] xl:left-[20%] left-[6vw] top-[0.7%] md:top-[unset] text-[5vw] font-[silkserif-regular] md:text-[3.6vw] xl:text-[3.3vw] md:font-[silkserif-light]">
                 03</div>
@@ -448,7 +446,7 @@
             </div>
         </section>
     </main>
-    <section class="footer-page w-full  md:h-fit md:pb-[5vw] xl:pb-[0]  pt-[34vw] md:pt-[20vw] xl:pt-[14vw] px-[5vw]  md:px-[0vw] text-white relative">
+    <section data-scroll class="footer-page w-full  md:h-fit md:pb-[5vw] xl:pb-[0]  pt-[34vw] md:pt-[20vw] xl:pt-[14vw] px-[5vw]  md:px-[0vw] text-white relative">
         <div
             class="pageNumber absolute md:left-[18%] xl:left-[20%] left-[5.5vw] top-[11.5%] md:top-[unset] text-[5vw] font-[silkserif-regular] md:text-[3.6vw] xl:text-[3.3vw] md:font-[silkserif-light]">
             04</div>
@@ -510,6 +508,7 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -517,7 +516,7 @@
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
-    <script src="script.js"></script>
+    <script  src="script.js"></script>
 </body>
 
 </html>
