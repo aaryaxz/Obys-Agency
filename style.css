@@ -59,6 +59,9 @@ body{
     }
 }
 
+._canvas_container{
+    z-index: 999999999 !important;
+}
 
 @keyframes font-flash {
     0% {

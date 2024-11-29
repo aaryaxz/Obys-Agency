@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="font.css" />
     <link rel="shortcut icon" href="Assets/Images/obys-Icon.png" type="image/x-icon" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-[#151515] ">
     <div
         class="cursor w-[2.7vw] h-[2.7vw] hidden md:block pointer-events-none rounded-full border-[1.5px] border-zinc-400 fixed top-0 left-0 mix-blend-difference translate-x-[-50%] translate-y-[-50%] z-[99]">
     </div>
-    <div
+    <!-- <div
         class="preloader w-full h-screen bg-[#0B0B0B] fixed top-0 left-0 z-[999] 2xl:py-[8vw] lg:py-[20vw] py-[0vw] px-[5vw]">
         <div class="preloader-content text-white absolute lg:static top-[35%] lg:top[0%]">
             <div
@@ -52,7 +52,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> -->
     <main class="main w-full ">
         <section data-scroll class="landing-page min-h-screen  w-full  text-white">
             <div
@@ -107,7 +107,8 @@
                     <a href="#">Contacts</a>
                 </div>
             </div>
-            <div data-scroll data-scroll-speed=".3" class="hero-section  w-full xl:h-[80vh] h-fit relative z-10 xl:pt-[5vw] md:pt-[10vw] md:pb-[45vw] xl:pb-[0vw] py-[27vw] md:py-[0vw]  md:px-[0vw] px-[5vw] ">
+            <div data-scroll data-scroll-speed=".3"
+                class="hero-section  w-full xl:h-[80vh] h-fit relative z-10 xl:pt-[5vw] md:pt-[10vw] md:pb-[45vw] xl:pb-[0vw] py-[27vw] md:py-[0vw]  md:px-[0vw] px-[5vw] ">
                 <div
                     class="pageNumber absolute md:left-[18%] xl:left-[20%] bottom-[73%] md:bottom-[unset] text-[5vw] font-[silkserif-regular] md:text-[3.6vw] xl:text-[3.3vw] md:font-[silkserif-light]">
                     01</div>
@@ -144,7 +145,8 @@
                     </div>
                 </div>
             </div>
-            <div  class="video-container  w-full  xl:h-screen  relative xl:pt-[0vw] md:pt-[8vw] md:pb-[50vw] xl:pb-[0vw]">
+            <div
+                class="video-container  w-full  xl:h-screen  relative xl:pt-[0vw] md:pt-[8vw] md:pb-[50vw] xl:pb-[0vw]">
                 <div
                     class="video-container-inner overflow-hidden md:overflow-visible md:w-[71vw] w-full h-[40vh] md:h-fit xl:h-[70vh] absolute  md:top[unset] xl:right-0 md:right-[3.6%] z-[50]">
                     <div class="video-cursor xl:w-[10vw] md:w-[13vw] w-[25vw] xl:h-[10vw]  md:h-[13vw] h-[25vw]  flex items-center justify-center rounded-full bg-[#FFA63D] absolute md:top-[-1%] xl:top-[-5%] top-[50%] 
@@ -160,7 +162,38 @@
                 </div>
             </div>
         </section>
-        <section data-scroll class="our-projects-page min-h-screen w-full bg-zinc-600 md:mb-[25vw] xl:mb-[15vw]"></section>
+        <section data-scroll
+            class="our-projects-page min-h-screen w-full bg-rose-500 md:mb-[25vw] xl:mb-[15vw] text-white">
+            <div
+                class="pageNumber absolute md:left-[18%] xl:left-[20%] left-[6vw] top-[0.7%] md:top-[unset] text-[5vw] font-[silkserif-regular] md:text-[3.6vw] xl:text-[3.3vw] md:font-[silkserif-light]">
+                02</div>
+            <div class="our-projects-header md:w-[70%] ml-[27vw] px-[3vw]">
+                <h1
+                    class="md:text-[7.5vw] text-[10vw] xl:[word-spacing:-1px] md:[word-spacing:10px] [word-spacing:0px] md:tracking-[-.20rem] tracking-[-.10rem] leading-none uppercase font-[plain-regular] ">
+                    Our Projects</h1>
+                <div
+                    class="underline w-full bg-white h-[1.5px] md:h-[2px] mt-[8vw] md:mt-[4vw] xl:mt-[5vw]  mb-[15vw] md:mb-[6vw] xl:mb-[3vw]">
+                </div>
+            </div>
+            <div class="our-projects-content w-full h-screen  ">
+                <div class="our-projects-1">
+                    <div class="project-card-1 border border-white w-[24vw] h-[40vw]">
+                        <h2>OLGA PRUDKA</h2>
+                        <div class="project-card-img bg-amber-500 w-full h-[75%] relative">
+                            <img src="Assets/Images/Olga_Prudka_1.jpg" class="w-full h-full absolute z-[33] object-cover " alt="">
+                            <img src="Assets/Images/olga-prudka2.jpg" class="w-full h-full absolute object-cover " alt="">
+                        </div>
+                        <div class="project-card-details">
+                            <p>Logo design,
+                                Website design,
+                                Development</p>
+                            <p>2023</p>
+                        </div>
+                    </div>
+                    <div class="project-underline"></div>
+                </div>
+            </div>
+        </section>
 
         <section data-scroll class="about-page min-h-screen w-full  pt-[14vw] md:pt-[0vw] relative text-white">
             <div
@@ -446,63 +479,91 @@
             </div>
         </section>
     </main>
-    <section data-scroll class="footer-page w-full  md:h-fit md:pb-[5vw] xl:pb-[0]  pt-[34vw] md:pt-[20vw] xl:pt-[14vw] px-[5vw]  md:px-[0vw] text-white relative">
+    <section data-scroll
+        class="footer-page w-full  md:h-fit md:pb-[5vw] xl:pb-[0]  pt-[34vw] md:pt-[20vw] xl:pt-[14vw] px-[5vw]  md:px-[0vw] text-white relative">
         <div
             class="pageNumber absolute md:left-[18%] xl:left-[20%] left-[5.5vw] top-[11.5%] md:top-[unset] text-[5vw] font-[silkserif-regular] md:text-[3.6vw] xl:text-[3.3vw] md:font-[silkserif-light]">
             04</div>
         <div class="footer-page-content xl:px-[3vw] w-full md:ml-[27vw] md:w-[70%] ">
             <div class="footer-header  uppercase leading-none">
-                <h1 class="font-[plain-regular] flex items-center text-[10vw] md:text-[8vw] xl:text-[7.5vw] gap-[4vw] md:gap-[3vw]">Let’s Create <svg class="entry-title__arrow xl:w-[6vw] md:w-[7vw] w-[8vw] xl:h-[6vw] md:h-[7vw] h-[8vw]" viewBox="0 0 118 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M57.295 75.1963L56.5879 74.4892L55.8808 75.1963L56.5879 75.9034L57.295 75.1963ZM77.0457 55.4457L77.7528 56.1528L79.4599 54.4457L77.0457 54.4457L77.0457 55.4457ZM72.3742 90.2755L71.6671 90.9826L72.3742 91.6897L73.0813 90.9826L72.3742 90.2755ZM117.513 45.1371L118.22 45.8442L118.927 45.1371L118.22 44.4299L117.513 45.1371ZM102.433 30.0578L103.141 29.3507L102.433 28.6431L101.726 29.3512L102.433 30.0578ZM102.433 30.0585L101.726 30.7656L102.433 31.4732L103.14 30.7651L102.433 30.0585ZM72.3743 9.86531e-07L73.0814 -0.707106L72.3743 -1.41421L71.6672 -0.707106L72.3743 9.86531e-07ZM57.2951 15.0792L56.588 14.3721L55.8809 15.0792L56.588 15.7863L57.2951 15.0792ZM76.3363 34.1205L76.3363 35.1205L78.7506 35.1205L77.0434 33.4134L76.3363 34.1205ZM-4.50306e-05 34.1205L-4.50525e-05 33.1205L-1.00005 33.1205L-1.00005 34.1205L-4.50306e-05 34.1205ZM-4.45646e-05 55.4457L-1.00004 55.4457L-1.00004 56.4457L-4.45427e-05 56.4457L-4.45646e-05 55.4457ZM58.0021 75.9034L77.7528 56.1528L76.3385 54.7386L56.5879 74.4892L58.0021 75.9034ZM73.0813 89.5684L58.0021 74.4892L56.5879 75.9034L71.6671 90.9826L73.0813 89.5684ZM116.806 44.4299L71.6671 89.5684L73.0813 90.9826L118.22 45.8442L116.806 44.4299ZM101.726 30.765L116.806 45.8442L118.22 44.4299L103.141 29.3507L101.726 30.765ZM103.14 30.7651L103.141 30.7645L101.726 29.3512L101.725 29.3519L103.14 30.7651ZM103.14 29.3514L73.0814 -0.707106L71.6672 0.707108L101.726 30.7656L103.14 29.3514ZM71.6672 -0.707106L56.588 14.3721L58.0022 15.7863L73.0814 0.707108L71.6672 -0.707106ZM56.588 15.7863L75.6292 34.8276L77.0434 33.4134L58.0022 14.3721L56.588 15.7863ZM76.3363 33.1205L-4.50525e-05 33.1205L-4.50088e-05 35.1205L76.3363 35.1205L76.3363 33.1205ZM-1.00005 34.1205L-1.00004 55.4457L0.999955 55.4457L0.999955 34.1205L-1.00005 34.1205ZM-4.45427e-05 56.4457L77.0457 56.4457L77.0457 54.4457L-4.45864e-05 54.4457L-4.45427e-05 56.4457Z" fill="currentColor"></path></svg></h1>
+                <h1
+                    class="font-[plain-regular] flex items-center text-[10vw] md:text-[8vw] xl:text-[7.5vw] gap-[4vw] md:gap-[3vw]">
+                    Let’s Create <svg
+                        class="entry-title__arrow xl:w-[6vw] md:w-[7vw] w-[8vw] xl:h-[6vw] md:h-[7vw] h-[8vw]"
+                        viewBox="0 0 118 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M57.295 75.1963L56.5879 74.4892L55.8808 75.1963L56.5879 75.9034L57.295 75.1963ZM77.0457 55.4457L77.7528 56.1528L79.4599 54.4457L77.0457 54.4457L77.0457 55.4457ZM72.3742 90.2755L71.6671 90.9826L72.3742 91.6897L73.0813 90.9826L72.3742 90.2755ZM117.513 45.1371L118.22 45.8442L118.927 45.1371L118.22 44.4299L117.513 45.1371ZM102.433 30.0578L103.141 29.3507L102.433 28.6431L101.726 29.3512L102.433 30.0578ZM102.433 30.0585L101.726 30.7656L102.433 31.4732L103.14 30.7651L102.433 30.0585ZM72.3743 9.86531e-07L73.0814 -0.707106L72.3743 -1.41421L71.6672 -0.707106L72.3743 9.86531e-07ZM57.2951 15.0792L56.588 14.3721L55.8809 15.0792L56.588 15.7863L57.2951 15.0792ZM76.3363 34.1205L76.3363 35.1205L78.7506 35.1205L77.0434 33.4134L76.3363 34.1205ZM-4.50306e-05 34.1205L-4.50525e-05 33.1205L-1.00005 33.1205L-1.00005 34.1205L-4.50306e-05 34.1205ZM-4.45646e-05 55.4457L-1.00004 55.4457L-1.00004 56.4457L-4.45427e-05 56.4457L-4.45646e-05 55.4457ZM58.0021 75.9034L77.7528 56.1528L76.3385 54.7386L56.5879 74.4892L58.0021 75.9034ZM73.0813 89.5684L58.0021 74.4892L56.5879 75.9034L71.6671 90.9826L73.0813 89.5684ZM116.806 44.4299L71.6671 89.5684L73.0813 90.9826L118.22 45.8442L116.806 44.4299ZM101.726 30.765L116.806 45.8442L118.22 44.4299L103.141 29.3507L101.726 30.765ZM103.14 30.7651L103.141 30.7645L101.726 29.3512L101.725 29.3519L103.14 30.7651ZM103.14 29.3514L73.0814 -0.707106L71.6672 0.707108L101.726 30.7656L103.14 29.3514ZM71.6672 -0.707106L56.588 14.3721L58.0022 15.7863L73.0814 0.707108L71.6672 -0.707106ZM56.588 15.7863L75.6292 34.8276L77.0434 33.4134L58.0022 14.3721L56.588 15.7863ZM76.3363 33.1205L-4.50525e-05 33.1205L-4.50088e-05 35.1205L76.3363 35.1205L76.3363 33.1205ZM-1.00005 34.1205L-1.00004 55.4457L0.999955 55.4457L0.999955 34.1205L-1.00005 34.1205ZM-4.45427e-05 56.4457L77.0457 56.4457L77.0457 54.4457L-4.45864e-05 54.4457L-4.45427e-05 56.4457Z"
+                            fill="currentColor"></path>
+                    </svg></h1>
             </div>
-            <div class="underline w-full bg-gray-500 h-[1.5px] mb-[14vw] md:mb-[4vw] md:h-[1px] mt-[8vw] md:mt-[4vw] xl:my-[6vw] "></div>
+            <div
+                class="underline w-full bg-gray-500 h-[1.5px] mb-[14vw] md:mb-[4vw] md:h-[1px] mt-[8vw] md:mt-[4vw] xl:my-[6vw] ">
+            </div>
             <div class="footer-info flex flex-col md:flex-row">
                 <div class="social-links">
                     <p class="md:mb-[1.8vw] mb-[6vw]  md:text-[16px] font-[plain-regular]">Socials</p>
                     <div class="links">
                         <div class="link1  h-[6.8vw] md:h-[3.4vw] xl:h-[2vw] overflow-hidden ">
-                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Dribbble</h2>
-                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Dribbble</h2>
+                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Dribbble
+                            </h2>
+                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Dribbble
+                            </h2>
                         </div>
                         <div class="link2 h-[6.8vw] md:h-[3.4vw] xl:h-[2vw] overflow-hidden">
-                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Behance</h2>
-                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Behance</h2>
+                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Behance
+                            </h2>
+                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Behance
+                            </h2>
 
                         </div>
                         <div class="link3 h-[6.8vw] md:h-[3.4vw] xl:h-[2vw] overflow-hidden">
-                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Instagram</h2>
-                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Instagram</h2>
+                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Instagram
+                            </h2>
+                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Instagram
+                            </h2>
 
                         </div>
                         <div class="link4 h-[6.8vw] md:h-[3.4vw] xl:h-[2vw] overflow-hidden">
-                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Facebook</h2>
-                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Facebook</h2>
+                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Facebook
+                            </h2>
+                            <h2 class="leading-none text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Facebook
+                            </h2>
 
 
                         </div>
                         <div class="link5  h-[6.8vw] md:h-[3.4vw] xl:h-[2vw]  overflow-hidden">
-                            <h2 class="leading-none  text-[6vw] md:text-[3vw] xl:text-[1.8vw]  tracking-tight">Twitter</h2>
-                            <h2 class="leading-none  text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Twitter</h2>
+                            <h2 class="leading-none  text-[6vw] md:text-[3vw] xl:text-[1.8vw]  tracking-tight">Twitter
+                            </h2>
+                            <h2 class="leading-none  text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">Twitter
+                            </h2>
                         </div>
                         <div class="link6  h-[6.8vw] md:h-[3.4vw] xl:h-[2vw]  overflow-hidden">
-                            <h2 class="leading-none  text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">YouTube</h2>
-                            <h2 class="leading-none  text-[6vw] md:text-[3vw] xl:text-[1.8vw]  tracking-tight">YouTube</h2>
+                            <h2 class="leading-none  text-[6vw] md:text-[3vw] xl:text-[1.8vw] tracking-tight">YouTube
+                            </h2>
+                            <h2 class="leading-none  text-[6vw] md:text-[3vw] xl:text-[1.8vw]  tracking-tight">YouTube
+                            </h2>
                         </div>
                     </div>
 
                 </div>
                 <div class="address w-[fit] pr-[40vw] md:pr-[0]  md:w-[18vw] md:ml-[10vw] xl:ml-[15vw] md:mr-[8vw]  ">
                     <p class="md:mb-[1.8vw] my-[6.5vw] md:mt-[0] md:text-[16px] font-[plain-regular]">Address</p>
-                    <p class="text-[6.2vw] md:text-[3.2vw] xl:text-[2vw] leading-none font-[plain-light] w-full tracking-tight">Zamarstynivska 55
+                    <p
+                        class="text-[6.2vw] md:text-[3.2vw] xl:text-[2vw] leading-none font-[plain-light] w-full tracking-tight">
+                        Zamarstynivska 55
                         79019 <span class="mr-[40px] md:mr-[0px] xl:mr-[40px]">Lviv</span>
                         Ukraine</p>
                 </div>
                 <div class="obys-info  ">
                     <p class="md:mb-[1.8vw] my-[6.5vw] md:mt-[0]  md:text-[16px] font-[plain-regular]">Say Hi!</p>
-                    <p class="text-[6vw] md:text-[3vw] md:w-[90%] leading-none  break-words  xl:w-full xl:text-[1.8vw] underline">info@obys.agency</p>
+                    <p
+                        class="text-[6vw] md:text-[3vw] md:w-[90%] leading-none  break-words  xl:w-full xl:text-[1.8vw] underline">
+                        info@obys.agency</p>
                 </div>
             </div>
-            <div class="underline w-full bg-gray-500 h-[1.5px] md:h-[1px] mt-[16vw] md:mt-[5vw] xl:mt-[15vw] xl:mt-[6vw]  "></div>
+            <div
+                class="underline w-full bg-gray-500 h-[1.5px] md:h-[1px] mt-[16vw] md:mt-[5vw] xl:mt-[15vw] xl:mt-[6vw]  ">
+            </div>
 
             <p class="py-[8vw] md:py-[3vw] xl:py-[2vw] text-[18px] md:text-[20px]">Obys Agency © 2024</p>
         </div>
@@ -515,8 +576,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
-    <script  src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
