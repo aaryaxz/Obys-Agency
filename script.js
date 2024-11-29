@@ -2,20 +2,20 @@
 const locomotiveScroll = new LocomotiveScroll();
 
 
-// function disableScroll() {
-//     // Get the current lo scroll position
-//     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//     const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+function disableScroll() {
+    // Get the current lo scroll position
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
-//     // if any scroll is attempted, set this to the previous value
-//     window.onscroll = function() {
-//         window.scrollTo(scrollLeft, scrollTop);
-//     };
-// }
+    // if any scroll is attempted, set this to the previous value
+    window.onscroll = function() {
+        window.scrollTo(scrollLeft, scrollTop);
+    };
+}
 
-// function enableScroll() {
-//     window.onscroll = function() {};
-// }
+function enableScroll() {
+    window.onscroll = function() {};
+}
 
 function preloaderAnimation() {
     disableScroll();
