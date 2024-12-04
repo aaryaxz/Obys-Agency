@@ -40,6 +40,24 @@ body{
     border-color: #151515;
 }
 
+.project-circle-in{
+    transition: ease-in-out .4s scale;
+    scale: 0;
+}
+.project-circle:hover .project-circle-in{
+    scale: 1;   
+}
+.project-circle-in-para{
+    scale: .1;
+    transition: scale ease-in-out .5s, opacity ease-in-out .3s;
+    transition-delay:0.4s;
+    opacity: 0;
+}
+.project-circle:hover  .project-circle-in-para{
+    scale: 1;
+    opacity: 1;
+}
+
 
 
 .marquee-content{
@@ -61,6 +79,7 @@ body{
 
 ._canvas_container{
     z-index: 999999999 !important;
+    pointer-events: none;
 }
 
 @keyframes font-flash {
