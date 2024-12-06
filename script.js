@@ -163,7 +163,7 @@ function dynamicProjectContents() {
             cardHeading: "OLGA PRUDKA",
             img1Src: "Assets/Images/img1.jpg",
             img2Src: "Assets/Images/img2.jpg",
-            para1: "Logo design,Website design,Development",
+            para1: "Logo design, Website design, Development",
             para2: "2023",
             height: 30,
             width: 24,
@@ -172,7 +172,7 @@ function dynamicProjectContents() {
             cardHeading: "AIM",
             img1Src: "Assets/Images/img3.jpg",
             img2Src: "Assets/Images/img4.jpg",
-            para1: "Logo design,Website design,Development",
+            para1: "Logo design, Website design, Development",
             para2: "2024",
             height: 40,
             width: 31,
@@ -181,7 +181,7 @@ function dynamicProjectContents() {
             cardHeading: "David Laxer",
             img1Src: "Assets/Images/img5.jpg",
             img2Src: "Assets/Images/img6.jpg",
-            para1: "Website design,Development",
+            para1: "Website design, Development",
             para2: "2022",
             height: 40,
             width: 31,
@@ -191,7 +191,7 @@ function dynamicProjectContents() {
             cardHeading: "OCHI",
             img1Src: "Assets/Images/img7.jpg",
             img2Src: "Assets/Images/img8.jpg",
-            para1: "Website design,Development",
+            para1: "Website design, Development",
             para2: "2023",
             height: 40,
             width: 31,
@@ -201,7 +201,7 @@ function dynamicProjectContents() {
             cardHeading: "Éminente",
             img1Src: "Assets/Images/img9.jpg",
             img2Src: "Assets/Images/img10.jpg",
-            para1: "Logo design,Website design,Development",
+            para1: "Logo design, Website design, Development",
             para2: "2023",
             height: 30,
             width: 24,
@@ -211,7 +211,7 @@ function dynamicProjectContents() {
             cardHeading: "MAKHNO",
             img1Src: "Assets/Images/img11.jpg",
             img2Src: "Assets/Images/img12.jpg",
-            para1: "Website design,Development",
+            para1: "Website design, Development",
             para2: "2023",
             height: 40,
             width: 31,
@@ -233,7 +233,7 @@ function dynamicProjectContents() {
         },
         {
             right: 37,
-            bottom: 7,
+            bottom: 0,
             rotate: -90,
             circlePara: "We like its color palette 🎨",
             textStyle: "center"
@@ -252,19 +252,19 @@ function dynamicProjectContents() {
             project_card_index
         ) {
             const project_card = `
-                    <div class="project-card-${project_card_index} w-[${width}vw] mt-[${marginTop}vw] h-fit ">
-                        <h2 class="text-[2.7vw] leading-none font-[plain-regular]">${cardHeading}</h2>
-                        <div class="project-card-img bg-amber-500 w-full mt-[3vw] mb-[2vw] h-[${height}vw] relative">
+                    <div class="project-card-${project_card_index} w-full w-full lg:w-[${width}vw] lg:mt-[${marginTop}vw] h-fit ">
+                        <h2 class=" text-[6vw] md:text-[2.7vw]   leading-none font-[plain-regular]">${cardHeading}</h2>
+                        <div class="project-card-img bg-amber-500 w-full mt-[7vw] mb-[5vw] md:mt-[3vw] md:mb-[2vw] h-[62vh] md:h-[60vw] lg:h-[${height}vw] relative">
                             <img src="${img1Src}" class="w-full h-full absolute z-[33] object-cover "
                             alt="">
                             <img src="${img2Src}" class="w-full h-full absolute object-cover "
                             alt="">   
                         </div>
-                        <div class="project-card-details flex justify-between">
-                            <p class="font-[plain-light] w-[50%] text-[15.7px]">${para1}</p>
-                            <p class="font-[plain-light]">${para2}</p>
+                        <div class="project-card-details flex justify-between ">
+                            <p class="font-[plain-light] w-[50%]  lg:w-[50%] text-[14px] md:text-[17px] lg:text-[15.7px]">${para1}</p>
+                            <p class="font-[plain-light] text-[14px] md:text-[15.7px]">${para2}</p>
                         </div>
-                        <div class="project-underline w-full bg-white h-[1px] mt-[2vw]"></div>
+                        <div class="project-underline w-full bg-white h-[1px] mt-[6vw] mb-[12vw] md:mb-[6vw]  lg:mb-[0vw] md:mt-[2vw]"></div>
                     </div>
                     
             `;
@@ -276,14 +276,14 @@ function dynamicProjectContents() {
         var circle = projectCircleData.slice(our_project_index, our_project_index + 1)
         var projectCircle = circle.map(function ({ bgColor, right, left, bottom, rotate, circlePara, textStyle },) {
             const project_circle = ` <div
-        class="project-circle w-[23vw]  h-[23vw] flex justify-center items-center  border border-white rounded-full mt-[15vw] absolute right-[${right}%] left-[${left}]  bottom-[${bottom}%]">
+        class="project-circle w-[23vw]  h-[23vw] hidden lg:flex justify-center items-center  border border-white rounded-full mt-[15vw] absolute right-[${right}%] left-[${left}]  bottom-[${bottom}%]">
         <svg class="button__arrow w-[8vw] h-[8vw] rotate-[${rotate}deg]" viewBox="0 0 91 118" fill="none">
             <path
                 d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
                 fill="currentColor"></path>
         </svg>
         <div
-            class="project-circle-in  w-full  h-full flex justify-center items-center bg-white text-black rounded-full  absolute top-[0] left-[0]">
+            class="project-circle-in flex w-full  h-full  justify-center items-center bg-white text-black rounded-full  absolute top-[0] left-[0]">
             <p class="project-circle-in-para w-[80%] text-${textStyle} leading-[1.3rem] font-[plain-regular] text-[15px]">
                 ${circlePara}
                 </p>
@@ -337,5 +337,5 @@ function sheryAnimation() {
 }
 
 window.onload = () => {
-    sheryAnimation()
+    // sheryAnimation()
 }

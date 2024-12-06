@@ -57,8 +57,14 @@ body{
     scale: 1;
     opacity: 1;
 }
+.totalProjectCircle{
+    scale:1;
+    transition: scale .3s ;
+}
 
-
+.totalProjectCircle:hover{
+    scale:.9
+}
 
 .marquee-content{
     animation: marquee-animation 60s linear infinite;
