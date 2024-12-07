@@ -114,7 +114,7 @@ function preloaderAnimation() {
         "-=1"
     );
 }
-preloaderAnimation();
+// preloaderAnimation();
 
 function cursorAnimation() {
     var cursor = document.querySelector(".cursor");
@@ -340,53 +340,80 @@ window.onload = () => {
     // sheryAnimation()
 }
 
-var vidInnerContainer = document.querySelector(".video-inner-container")
-var vid = document.querySelector(".video-inner-container video")
-var vidCursor = document.querySelector(".video-cursor")
-vidInnerContainer.addEventListener("mousemove", function (dets) {
-    const rect = vidInnerContainer.getBoundingClientRect()
-    var x = dets.clientX - rect.left 
-    var y = dets.clientY -rect.top 
-    gsap.set(".cursor",{opacity:0})
-    gsap.to(vidCursor,{
+function videoCursorAnimation() {
+    var vidInnerContainer = document.querySelector(".video-inner-container")
+    var vid = document.querySelector(".video-inner-container video")
+    var vidCursor = document.querySelector(".video-cursor")
+    vidInnerContainer.addEventListener("mousemove", function (dets) {
+        const rect = vidInnerContainer.getBoundingClientRect()
+        var x = dets.clientX - rect.left
+        var y = dets.clientY - rect.top
+        gsap.set(".cursor", { opacity: 0 })
+        gsap.to(vidCursor, {
+            top: y,
+            left: x
+        })
+    });
+    vidInnerContainer.addEventListener("mouseleave", function (dets) {
+        gsap.set(".cursor", { opacity: 1 })
+        gsap.to(vidCursor, {
+            top: "-5%",
+            left: "75%",
+            duration: 0.5,
+        })
+    });
+
+    var isPlaying = 0
+    vidInnerContainer.addEventListener("click", function () {
+        if (isPlaying == 0) {
+            vid.play()
+            vid.style.opacity = 1
+            vidCursor.innerHTML = '<i class="ri-pause-mini-line xl:text-[2.6vw] md:text-[4vw] text-[5vw]"></i>'
+            gsap.to(vidCursor, {
+                scale: .5,
+                delay: .5,
+                duration: 1,
+                ease: "expo.out"
+            })
+            isPlaying = 1
+        }
+        else {
+            vid.pause()
+            vid.style.opacity = 0
+            vidCursor.innerHTML = '<i class="ri-play-fill xl:text-[2.6vw] md:text-[4vw] text-[5vw]"></i>'
+            gsap.to(vidCursor, {
+                scale: 1,
+                delay: .2,
+                duration: 1,
+                ease: "expo.out"
+            })
+            isPlaying = 0
+        }
+
+    })
+}
+
+videoCursorAnimation()
+
+var flag = document.querySelector(".text-container .flag")
+var thirdHeroHeader = document.querySelector(".hero-header-3")
+
+thirdHeroHeader.addEventListener("mousemove",function(dets){
+    const rectHeroHader = thirdHeroHeader.getBoundingClientRect()
+    const x = dets.clientX - rectHeroHader.left
+    const y = dets.clientY - rectHeroHader.top
+    gsap.to(flag,{
         top:y,
         left:x
     })
-});
-vidInnerContainer.addEventListener("mouseleave", function (dets) {
-    gsap.set(".cursor",{opacity:1})
-    gsap.to(vidCursor,{
-        top:"-5%",
-        left:"75%",
-        duration: 0.5, 
+})
+thirdHeroHeader.addEventListener("mouseenter",function(){
+    gsap.to(flag,{
+        opacity:1
     })
-});
-
-var x = 0
-vidInnerContainer.addEventListener("click",function(){
-    if(x==0){
-        vid.play()
-        vid.style.opacity = 1
-        vidCursor.innerHTML = '<i class="ri-pause-mini-line xl:text-[2.6vw] md:text-[4vw] text-[5vw]"></i>'
-        gsap.to(vidCursor,{
-            scale:.5,
-            delay:.5,
-            duration:1,
-            ease:"expo.out"
-        })
-        x=1
-    }
-    else{
-        vid.pause()
-        vid.style.opacity = 0
-        vidCursor.innerHTML = '<i class="ri-play-fill xl:text-[2.6vw] md:text-[4vw] text-[5vw]"></i>'
-        gsap.to(vidCursor,{
-            scale:1,
-            delay:.2,
-            duration:1,
-            ease:"expo.out"
-        })
-        x=0
-    }
-
+})
+thirdHeroHeader.addEventListener("mouseleave",function(){
+    gsap.to(flag,{
+        opacity:0
+    })
 })

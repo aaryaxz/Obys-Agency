@@ -31,13 +31,13 @@ body{
 }
 
 .hero-header:nth-child(3) h1{
-    transition: color .5s, -webkit-text-stroke 0.5s ,border-color 0.5s;
+    transition: color .5s, -webkit-text-stroke 0.5s ,border-color 0.2s;
 }
 
 .hero-header:nth-child(3) h1:hover{
     -webkit-text-stroke: 1px white;
     color: transparent;
-    border-color: #151515;
+    border-color: transparent;
 }
 
 .project-circle-in{
@@ -72,6 +72,9 @@ body{
 .marquee-content-2{
     animation: marquee-animation 60s linear infinite;
     animation-direction: reverse;
+}
+.text-container .flag{
+    opacity: 0;
 }
 
 @keyframes marquee-animation {
