@@ -13,7 +13,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#151515] ">
+<body class="bg-[#151515]  ">
     <div
         class="cursor w-[2.7vw] h-[2.7vw] hidden md:block pointer-events-none rounded-full border-[1.5px] border-zinc-400 fixed top-0 left-0 mix-blend-difference translate-x-[-50%] translate-y-[-50%] z-[99]">
     </div>
@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-    <main class="main w-full ">
+    <main class="main w-full overflow-x-hidden">
         <section data-scroll class="landing-page min-h-screen md:h-fit  w-full  text-white">
             <div
                 class="nav px-[4.3vw] px-[5vw] xl:py-[3.5vw] md:py-[2.5vw] py-[6vw] flex xl:gap-[20vw]  justify-between">
@@ -146,19 +146,17 @@
                 </div>
             </div>
             <div
-                class="video-container   w-full  xl:h-screen  relative  xl:pt-[0vw] md:pt-[8vw] md:pb-[50vw] xl:pb-[0vw]">
+                class="video-container w-full  xl:h-screen  relative  xl:pt-[0vw] md:pt-[8vw] md:pb-[50vw] xl:pb-[0vw]">
                 <div
-                    class="video-container-inner overflow-hidden md:overflow-visible md:w-[71vw] w-full h-[40vh] md:h-fit xl:h-[70vh] absolute  md:top[unset] xl:right-0 md:right-[3.6%] z-[50]">
+                    class="video-inner-container bg-[url('https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg')] bg-cover bg-center  md:overflow-visible md:w-[71vw] w-full h-[40vh] md:h-fit xl:h-[70vh] absolute  md:top[unset] xl:right-0 md:right-[3.6%] z-[50]">
                     <div class="video-cursor xl:w-[10vw] md:w-[13vw] w-[25vw] xl:h-[10vw]  md:h-[13vw] h-[25vw]  flex items-center justify-center rounded-full bg-[#FFA63D] absolute md:top-[-1%] xl:top-[-5%] top-[50%] 
                         md:left-[75%] left-[50%] translate-x-[-50%]  translate-y-[-50%] z-[99]">
                         <i class="ri-play-fill xl:text-[2.6vw] md:text-[4vw] text-[5vw]"></i>
                     </div>
-                    <img src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg"
-                        class="absolute md:top-0 md:left-0 w-full h-full object-cover scale-[1.2] md:scale-[1.1] xl:scale-[1] "
-                        alt="">
-                    <video class="w-full h-full object-cover "
-                        src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4" loop muted
-                        autoplay></video>
+
+                    <video class="w-full opacity-0 transition-opacity duration-[.5s] ease-in-out h-full object-cover "
+                        src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4" loop 
+                        ></video>
                 </div>
             </div>
         </section>
@@ -180,7 +178,7 @@
                 <div class="our-projects flex flex-col md:flex-row relative md:gap-[3vw] lg:gap-[0vw] lg:justify-between"></div> 
 
             </div>
-            <div class="totalProjectCircle w-[45vw] h-[45vw]  md:mb-[0] md:w-[24vw] md:h-[24vw] rounded-full bg-[#FFA63D] flex items-center ml-[22vw] md:ml-[40%] mt-[8vw] justify-center">
+            <div class="totalProjectCircle w-[45vw] h-[45vw]  md:mb-[0] md:w-[24vw] md:h-[24vw] rounded-full bg-[#FFA63D] flex items-center ml-[22vw] md:ml-[38.2%] mt-[8vw] justify-center">
                 <p class="font-[plain-regular] text-[15px]">All Projects <span class="font-[silkserif-light]">(18)</span></p>
             </div>
             </div>
