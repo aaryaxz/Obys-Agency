@@ -114,7 +114,7 @@ function preloaderAnimation() {
         "-=1"
     );
 }
-// preloaderAnimation();
+preloaderAnimation();
 
 function cursorAnimation() {
     var cursor = document.querySelector(".cursor");
