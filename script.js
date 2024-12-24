@@ -114,7 +114,7 @@ function preloaderAnimation() {
         "-=1"
     );
 }
-preloaderAnimation();
+// preloaderAnimation();
 
 function cursorAnimation() {
     var cursor = document.querySelector(".cursor");
@@ -395,25 +395,93 @@ function videoCursorAnimation() {
 
 videoCursorAnimation()
 
-var flag = document.querySelector(".text-container .flag")
-var thirdHeroHeader = document.querySelector(".hero-header-3")
 
-thirdHeroHeader.addEventListener("mousemove",function(dets){
-    const rectHeroHader = thirdHeroHeader.getBoundingClientRect()
-    const x = dets.clientX - rectHeroHader.left
-    const y = dets.clientY - rectHeroHader.top
-    gsap.to(flag,{
-        top:y,
-        left:x
+function flagAnimation() {
+    var flag = document.querySelector(".text-container .flag")
+    var thirdHeroHeader = document.querySelector(".hero-header-3")
+
+    thirdHeroHeader.addEventListener("mousemove", function (dets) {
+        const rectHeroHader = thirdHeroHeader.getBoundingClientRect()
+        const x = dets.clientX - rectHeroHader.left
+        const y = dets.clientY - rectHeroHader.top
+        gsap.to(flag, {
+            top: y,
+            left: x
+        })
     })
-})
-thirdHeroHeader.addEventListener("mouseenter",function(){
-    gsap.to(flag,{
-        opacity:1
+    thirdHeroHeader.addEventListener("mouseenter", function () {
+        gsap.to(flag, {
+            opacity: 1
+        })
     })
-})
-thirdHeroHeader.addEventListener("mouseleave",function(){
-    gsap.to(flag,{
-        opacity:0
+    thirdHeroHeader.addEventListener("mouseleave", function () {
+        gsap.to(flag, {
+            opacity: 0
+        })
     })
-})
+}
+flagAnimation()
+
+// Footer header element
+const footerHeaderElement = document.querySelector(".footer-header");
+
+// Header elements
+const headerElements = document.querySelectorAll(".footer-headers");
+const animatedHeader1 = document.querySelector(".footer-header-1");
+const animatedHeader2 = document.querySelector(".footer-header-2");
+
+// Text to animate
+const animationText = "Let's Create";
+const textArray = [...animationText];
+
+// Create spans for each character
+const spanTextArray = textArray.map((char) => `<span>${char}</span>`);
+const formattedText = spanTextArray.join("");
+
+// Assign animated text to headers
+animatedHeader1.innerHTML = formattedText;
+animatedHeader2.innerHTML = formattedText;
+
+// Select span elements in each header
+const animatedSpans1 = document.querySelectorAll(".footer-header-1 span");
+const animatedSpans2 = document.querySelectorAll(".footer-header-2 span");
+
+// Initial setup for GSAP
+gsap.set(animatedSpans2, { opacity: 0 });
+
+// Add hover effects for headers
+headerElements.forEach(function (header) {
+    header.addEventListener("mouseenter", function () {
+        gsap.to(animatedSpans2, {
+            opacity: 1,
+            stagger: 0.06,
+            duration: 0.5,
+        });
+        gsap.to(".footer-header svg",{
+            x:50,
+            ease:"expo.out",
+        },"-=.4")
+        gsap.to(animatedSpans1, {
+            opacity: 0,
+            stagger: 0.06,
+            duration: 0.4,
+        });
+    });
+    header.addEventListener("mouseleave", function () {
+        gsap.to(animatedSpans2, {
+            opacity: 0,
+            stagger: 0.06,
+            duration: 0.4,
+        });
+        gsap.to(".footer-header svg",{
+            x:0,
+            ease:"expo.out",
+
+        },"-=.4")
+        gsap.to(animatedSpans1, {
+            opacity: 1,
+            stagger: 0.06,
+            duration: 0.5,
+        });
+    });
+});
