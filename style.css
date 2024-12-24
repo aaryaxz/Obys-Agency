@@ -29,7 +29,11 @@ body{
     -webkit-text-stroke: 1px white;
     
 }
-
+.footer-header-2{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    border-color: transparent;
+}
 .hero-header:nth-child(3) h1{
     transition: color .5s, -webkit-text-stroke 0.5s ,border-color 0.2s;
 }

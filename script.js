@@ -458,7 +458,7 @@ headerElements.forEach(function (header) {
             duration: 0.5,
         });
         gsap.to(".footer-header svg",{
-            x:50,
+            x: window.innerWidth>=768?50:25,
             ease:"expo.out",
         },"-=.4")
         gsap.to(animatedSpans1, {
