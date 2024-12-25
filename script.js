@@ -185,7 +185,7 @@ function dynamicProjectContents() {
             para2: "2022",
             height: 40,
             width: 31,
-            marginTop: -.7,
+            marginTop: -0.7,
         },
         {
             cardHeading: "OCHI",
@@ -205,7 +205,7 @@ function dynamicProjectContents() {
             para2: "2023",
             height: 30,
             width: 24,
-            marginTop: -12
+            marginTop: -12,
         },
         {
             cardHeading: "MAKHNO",
@@ -215,31 +215,31 @@ function dynamicProjectContents() {
             para2: "2023",
             height: 40,
             width: 31,
-            marginTop: 4
+            marginTop: 4,
         },
     ];
     const projectCircleData = [
         {
             right: 0,
             bottom: 2,
-            circlePara: "We are thrilled to have you on board. We hope you enjoy the projects 🧡"
+            circlePara:
+                "We are thrilled to have you on board. We hope you enjoy the projects 🧡",
         },
         {
             left: 0,
             bottom: 60,
             rotate: -45,
             circlePara: "It will make you WOW! 😉",
-            textStyle: "center"
+            textStyle: "center",
         },
         {
             right: 37,
             bottom: 0,
             rotate: -90,
             circlePara: "We like its color palette 🎨",
-            textStyle: "center"
+            textStyle: "center",
         },
     ];
-
 
     var our_projects = document.querySelectorAll(".our-projects");
     our_projects.forEach(function (our_project, our_project_index) {
@@ -252,8 +252,8 @@ function dynamicProjectContents() {
             project_card_index
         ) {
             const project_card = `
-                    <div class="project-card-${project_card_index} w-full w-full lg:w-[${width}vw] lg:mt-[${marginTop}vw] h-fit ">
-                        <h2 class=" text-[6vw] md:text-[2.7vw]   leading-none font-[plain-regular]">${cardHeading}</h2>
+                    <div class="project-card-${project_card_index} relative w-full w-full lg:w-[${width}vw] lg:mt-[${marginTop}vw] h-fit ">
+                        <h2 class=" text-[6vw] md:text-[2.7vw] mt-[18vw] lg:mt-[0]   leading-none font-[plain-regular]">${cardHeading}</h2>
                         <div class="project-card-img bg-amber-500 w-full mt-[7vw] mb-[5vw] md:mt-[3vw] md:mb-[2vw] h-[62vh] md:h-[60vw] lg:h-[${height}vw] relative">
                             <img src="${img1Src}" class="w-full h-full absolute z-[33] object-cover "
                             alt="">
@@ -264,7 +264,7 @@ function dynamicProjectContents() {
                             <p class="font-[plain-light] w-[50%]  lg:w-[50%] text-[14px] md:text-[17px] lg:text-[15.7px]">${para1}</p>
                             <p class="font-[plain-light] text-[14px] md:text-[15.7px]">${para2}</p>
                         </div>
-                        <div class="project-underline w-full bg-white h-[1px] mt-[6vw] mb-[12vw] md:mb-[6vw]  lg:mb-[0vw] md:mt-[2vw]"></div>
+                        <div class="project-underline absolute right-[0] underline w-[0%] bg-white h-[1px] mt-[6vw] mb-[12vw] md:mb-[6vw]  lg:mb-[0vw] md:mt-[2vw]"></div>
                     </div>
                     
             `;
@@ -273,10 +273,21 @@ function dynamicProjectContents() {
         });
         our_project.innerHTML = projectCard.join("");
 
-        var circle = projectCircleData.slice(our_project_index, our_project_index + 1)
-        var projectCircle = circle.map(function ({ bgColor, right, left, bottom, rotate, circlePara, textStyle },) {
-            const project_circle = ` <div
-        class="project-circle w-[23vw]  h-[23vw] hidden lg:flex justify-center items-center  border border-white rounded-full mt-[15vw] absolute right-[${right}%] left-[${left}]  bottom-[${bottom}%]">
+        var circle = projectCircleData.slice(
+            our_project_index,
+            our_project_index + 1
+        );
+        var projectCircle = circle.map(function ({
+            bgColor,
+            right,
+            left,
+            bottom,
+            rotate,
+            circlePara,
+            textStyle,
+        }) {
+            const project_circle = ` <div 
+        class="project-circle w-[23vw]  h-[23vw] hidden lg:flex justify-center items-center  border border-white rounded-full mt-[15vw] absolute right-[${right}%] left-[${left}]  bottom-[${bottom}%]" data-scroll data-scroll-speed=".08">
         <svg class="button__arrow w-[8vw] h-[8vw] rotate-[${rotate}deg]" viewBox="0 0 91 118" fill="none">
             <path
                 d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
@@ -288,14 +299,14 @@ function dynamicProjectContents() {
                 ${circlePara}
                 </p>
         </div>
-    </div>`
-            return project_circle
-        })
+    </div>`;
+            return project_circle;
+        });
         our_project.innerHTML += projectCircle.join("");
     });
 }
 
-dynamicProjectContents()
+dynamicProjectContents();
 
 function sheryAnimation() {
     Shery.imageEffect(".project-card-img", {
@@ -338,150 +349,168 @@ function sheryAnimation() {
 
 window.onload = () => {
     // sheryAnimation()
-}
+};
 
 function videoCursorAnimation() {
-    var vidInnerContainer = document.querySelector(".video-inner-container")
-    var vid = document.querySelector(".video-inner-container video")
-    var vidCursor = document.querySelector(".video-cursor")
+    var vidInnerContainer = document.querySelector(".video-inner-container");
+    var vid = document.querySelector(".video-inner-container video");
+    var vidCursor = document.querySelector(".video-cursor");
     vidInnerContainer.addEventListener("mousemove", function (dets) {
-        const rect = vidInnerContainer.getBoundingClientRect()
-        var x = dets.clientX - rect.left
-        var y = dets.clientY - rect.top
-        gsap.set(".cursor", { opacity: 0 })
+        const rect = vidInnerContainer.getBoundingClientRect();
+        var x = dets.clientX - rect.left;
+        var y = dets.clientY - rect.top;
+        gsap.set(".cursor", { opacity: 0 });
         gsap.to(vidCursor, {
             top: y,
-            left: x
-        })
+            left: x,
+        });
     });
     vidInnerContainer.addEventListener("mouseleave", function (dets) {
-        gsap.set(".cursor", { opacity: 1 })
+        gsap.set(".cursor", { opacity: 1 });
         gsap.to(vidCursor, {
             top: "-5%",
             left: "75%",
             duration: 0.5,
-        })
+        });
     });
 
-    var isPlaying = 0
+    var isPlaying = 0;
     vidInnerContainer.addEventListener("click", function () {
         if (isPlaying == 0) {
-            vid.play()
-            vid.style.opacity = 1
-            vidCursor.innerHTML = '<i class="ri-pause-mini-line xl:text-[2.6vw] md:text-[4vw] text-[5vw]"></i>'
+            vid.play();
+            vid.style.opacity = 1;
+            vidCursor.innerHTML =
+                '<i class="ri-pause-mini-line xl:text-[2.6vw] md:text-[4vw] text-[5vw]"></i>';
             gsap.to(vidCursor, {
-                scale: .5,
-                delay: .5,
+                scale: 0.5,
+                delay: 0.5,
                 duration: 1,
-                ease: "expo.out"
-            })
-            isPlaying = 1
-        }
-        else {
-            vid.pause()
-            vid.style.opacity = 0
-            vidCursor.innerHTML = '<i class="ri-play-fill xl:text-[2.6vw] md:text-[4vw] text-[5vw]"></i>'
+                ease: "expo.out",
+            });
+            isPlaying = 1;
+        } else {
+            vid.pause();
+            vid.style.opacity = 0;
+            vidCursor.innerHTML =
+                '<i class="ri-play-fill xl:text-[2.6vw] md:text-[4vw] text-[5vw]"></i>';
             gsap.to(vidCursor, {
                 scale: 1,
-                delay: .2,
+                delay: 0.2,
                 duration: 1,
-                ease: "expo.out"
-            })
-            isPlaying = 0
+                ease: "expo.out",
+            });
+            isPlaying = 0;
         }
-
-    })
+    });
 }
 
-videoCursorAnimation()
-
+videoCursorAnimation();
 
 function flagAnimation() {
-    var flag = document.querySelector(".text-container .flag")
-    var thirdHeroHeader = document.querySelector(".hero-header-3")
+    var flag = document.querySelector(".text-container .flag");
+    var thirdHeroHeader = document.querySelector(".hero-header-3");
 
     thirdHeroHeader.addEventListener("mousemove", function (dets) {
-        const rectHeroHader = thirdHeroHeader.getBoundingClientRect()
-        const x = dets.clientX - rectHeroHader.left
-        const y = dets.clientY - rectHeroHader.top
+        const rectHeroHader = thirdHeroHeader.getBoundingClientRect();
+        const x = dets.clientX - rectHeroHader.left;
+        const y = dets.clientY - rectHeroHader.top;
         gsap.to(flag, {
             top: y,
-            left: x
-        })
-    })
+            left: x,
+        });
+    });
     thirdHeroHeader.addEventListener("mouseenter", function () {
         gsap.to(flag, {
-            opacity: 1
-        })
-    })
+            opacity: 1,
+        });
+    });
     thirdHeroHeader.addEventListener("mouseleave", function () {
         gsap.to(flag, {
-            opacity: 0
-        })
-    })
+            opacity: 0,
+        });
+    });
 }
-flagAnimation()
+flagAnimation();
 
-// Footer header element
-const footerHeaderElement = document.querySelector(".footer-header");
+function footerHeaderAnimation() {
+    const headerElements = document.querySelectorAll(".footer-headers");
+    const animatedHeader1 = document.querySelector(".footer-header-1");
+    const animatedHeader2 = document.querySelector(".footer-header-2");
 
-// Header elements
-const headerElements = document.querySelectorAll(".footer-headers");
-const animatedHeader1 = document.querySelector(".footer-header-1");
-const animatedHeader2 = document.querySelector(".footer-header-2");
+    const animationText = "Let's Create";
+    const textArray = [...animationText];
 
-// Text to animate
-const animationText = "Let's Create";
-const textArray = [...animationText];
+    // Create spans for each character
+    const spanTextArray = textArray.map((char) => `<span>${char}</span>`);
+    const formattedText = spanTextArray.join("");
 
-// Create spans for each character
-const spanTextArray = textArray.map((char) => `<span>${char}</span>`);
-const formattedText = spanTextArray.join("");
+    animatedHeader1.innerHTML = formattedText;
+    animatedHeader2.innerHTML = formattedText;
 
-// Assign animated text to headers
-animatedHeader1.innerHTML = formattedText;
-animatedHeader2.innerHTML = formattedText;
+    const animatedSpans1 = document.querySelectorAll(".footer-header-1 span");
+    const animatedSpans2 = document.querySelectorAll(".footer-header-2 span");
 
-// Select span elements in each header
-const animatedSpans1 = document.querySelectorAll(".footer-header-1 span");
-const animatedSpans2 = document.querySelectorAll(".footer-header-2 span");
+    gsap.set(animatedSpans2, { opacity: 0 });
 
-// Initial setup for GSAP
-gsap.set(animatedSpans2, { opacity: 0 });
-
-// Add hover effects for headers
-headerElements.forEach(function (header) {
-    header.addEventListener("mouseenter", function () {
-        gsap.to(animatedSpans2, {
-            opacity: 1,
-            stagger: 0.06,
-            duration: 0.5,
+    headerElements.forEach(function (header) {
+        header.addEventListener("mouseenter", function () {
+            gsap.to(animatedSpans2, {
+                opacity: 1,
+                stagger: 0.06,
+                duration: 0.5,
+            });
+            gsap.to(
+                ".footer-header svg",
+                {
+                    x: window.innerWidth >= 768 ? 50 : 25,
+                    ease: "expo.out",
+                },
+                "-=.4"
+            );
+            gsap.to(animatedSpans1, {
+                opacity: 0,
+                stagger: 0.06,
+                duration: 0.4,
+            });
         });
-        gsap.to(".footer-header svg",{
-            x: window.innerWidth>=768?50:25,
-            ease:"expo.out",
-        },"-=.4")
-        gsap.to(animatedSpans1, {
-            opacity: 0,
-            stagger: 0.06,
-            duration: 0.4,
+        header.addEventListener("mouseleave", function () {
+            gsap.to(animatedSpans2, {
+                opacity: 0,
+                stagger: 0.06,
+                duration: 0.4,
+            });
+            gsap.to(
+                ".footer-header svg",
+                {
+                    x: 0,
+                    ease: "expo.out",
+                },
+                "-=.4"
+            );
+            gsap.to(animatedSpans1, {
+                opacity: 1,
+                stagger: 0.06,
+                duration: 0.5,
+            });
         });
     });
-    header.addEventListener("mouseleave", function () {
-        gsap.to(animatedSpans2, {
-            opacity: 0,
-            stagger: 0.06,
-            duration: 0.4,
-        });
-        gsap.to(".footer-header svg",{
-            x:0,
-            ease:"expo.out",
+}
+footerHeaderAnimation();
 
-        },"-=.4")
-        gsap.to(animatedSpans1, {
-            opacity: 1,
-            stagger: 0.06,
-            duration: 0.5,
+function textUnderlineAnimation() {
+    var textUnderlines = document.querySelectorAll(".underline");
+    var textUnderlineArray = [...textUnderlines];
+    textUnderlineArray.map(function (textUnderline, index) {
+        return gsap.to(textUnderline, {
+            width: "100%",
+            duration: 0.8,
+            scrollTrigger: {
+                scroller: "body",
+                trigger: textUnderline,
+                start: "top-=400vw center",
+                end: "bottom bottom",
+            },
         });
     });
-});
+}
+textUnderlineAnimation()
