@@ -106,7 +106,7 @@ function preloaderAnimation() {
     animateHeroHeader(".hero-header h1,.hero-header span");
 
     tl.from(
-        ".pageNumber",
+        ".hero-section",
         {
             opacity: 0,
             duration: 0.5,
@@ -114,7 +114,7 @@ function preloaderAnimation() {
         "-=1"
     );
 }
-// preloaderAnimation();
+preloaderAnimation();
 
 function cursorAnimation() {
     var cursor = document.querySelector(".cursor");
@@ -253,7 +253,11 @@ function dynamicProjectContents() {
         ) {
             const project_card = `
                     <div class="project-card-${project_card_index} relative w-full w-full lg:w-[${width}vw] lg:mt-[${marginTop}vw] h-fit ">
-                        <h2 class=" text-[6vw] md:text-[2.7vw] mt-[18vw] lg:mt-[0]   leading-none font-[plain-regular]">${cardHeading}</h2>
+                        <div class="card-header overflow-hidden  h-[40px]">
+                            <h2 class=" text-[6vw] md:text-[2.7vw] mt-[18vw] lg:mt-[0]   leading-none font-[plain-regular]">${cardHeading}</h2>
+                            <h2 class=" text-[6vw] md:text-[2.7vw] mt-[18vw] lg:mt-[0]   leading-none font-[plain-regular]">${cardHeading}</h2>
+                        </div>
+
                         <div class="project-card-img bg-amber-500 w-full mt-[7vw] mb-[5vw] md:mt-[3vw] md:mb-[2vw] h-[62vh] md:h-[60vw] lg:h-[${height}vw] relative">
                             <img src="${img1Src}" class="w-full h-full absolute z-[33] object-cover "
                             alt="">
@@ -348,7 +352,7 @@ function sheryAnimation() {
 }
 
 window.onload = () => {
-    // sheryAnimation()
+    sheryAnimation()
 };
 
 function videoCursorAnimation() {
@@ -535,6 +539,7 @@ var projectCircleArray = [...projectCircles]
 
 
 function fadeInGroupAnimation(fadeGroupTarget) {
+    // gsap.set(pageNumbers,{opacity:})
     let pageNumberStartValue = "top-=350vw center"
     let projectCircleStartValue = "top-=250vw center"
     fadeGroupTarget.map(function (target) {
@@ -580,3 +585,37 @@ fadeInAnimation('.marquee-paragraph')
 fadeInAnimation('.footer-header')
 fadeInAnimation('.footer-info')
 fadeInAnimation('.copyright')
+
+
+function textAnimation(textTarget) {
+    gsap.from(textTarget, {
+        y: 100,
+        scrollTrigger: {
+            scroller: "body",
+            trigger: textTarget,
+            start: "top-=400vw center",
+            end: "bottom bottom",
+        },
+    })
+}
+textAnimation(".our-projects-header  h1")
+textAnimation(".about-header  h1")
+
+
+let cardHeaders = document.querySelectorAll(".card-header")
+
+cardHeaders.forEach(function(cardHeader){
+    var header = cardHeader.querySelectorAll("h2")
+    cardHeader.addEventListener("mousemove",function(){
+        gsap.to(header,{
+            y: "-40px",
+        })
+    })
+    cardHeader.addEventListener("mouseleave",function(){
+        gsap.to(header,{
+            y: 0,
+        })
+    })
+})
+
+
