@@ -402,6 +402,17 @@ function videoCursorAnimation() {
             isPlaying = 0;
         }
     });
+
+    gsap.to(".video-cursor", {
+        opacity: 1,
+        scrollTrigger: {
+            trigger: ".video-cursor",
+            scroller: "body",
+            // markers:true,
+            start: 'top-=200vw center',
+            end: "bottom bottom"
+        }
+    })
 }
 
 videoCursorAnimation();
@@ -514,3 +525,58 @@ function textUnderlineAnimation() {
     });
 }
 textUnderlineAnimation()
+
+
+var pageNumbers = document.querySelectorAll(".pageNumber")
+var pageNumberArray = [...pageNumbers]
+
+var projectCircles = document.querySelectorAll(".project-circle")
+var projectCircleArray = [...projectCircles]
+
+
+function fadeInGroupAnimation(fadeGroupTarget) {
+    let pageNumberStartValue = "top-=350vw center"
+    let projectCircleStartValue = "top-=250vw center"
+    fadeGroupTarget.map(function (target) {
+        return gsap.from(target, {
+            y: target === pageNumberArray ? 7 : "",
+            opacity: 0,
+            scrollTrigger: {
+                trigger: target,
+                scroller: "body",
+                start: target === pageNumberArray ? pageNumberStartValue : projectCircleStartValue,
+                end: "bottom bottom"
+            }
+        })
+
+    })
+
+}
+
+fadeInGroupAnimation(pageNumberArray)
+fadeInGroupAnimation(projectCircleArray)
+
+
+
+function fadeInAnimation(fadeTarget) {
+    let startValue = "top-=300vw center"
+    let marqueeParagraphStartValue = "top-=30% center"
+    let footerHeaderStartValue = "top-=350vw center"
+    let footerHeaderEndValue = "bottom+=100vw bottom"
+    gsap.from(fadeTarget, {
+        opacity: 0,
+        duration: 1,
+        y: 7,
+        scrollTrigger: {
+            trigger: fadeTarget,
+            scroller: "body",
+            start: fadeTarget === ".marquee-paragraph" ? marqueeParagraphStartValue : fadeTarget === ".footer-header" ? footerHeaderStartValue : startValue,
+            end: fadeTarget === ".footer-header" ? footerHeaderEndValue : '',
+        }
+    })
+}
+fadeInAnimation('.about-visual-paragraph')
+fadeInAnimation('.marquee-paragraph')
+fadeInAnimation('.footer-header')
+fadeInAnimation('.footer-info')
+fadeInAnimation('.copyright')
