@@ -1,4 +1,4 @@
-const locomotiveScroll = new LocomotiveScroll();
+const locoScroll = new LocomotiveScroll();
 
 function disableScroll() {
     // Get the current lo scroll position
@@ -113,8 +113,16 @@ function preloaderAnimation() {
         },
         "-=1"
     );
+    if(window.innerWidth <768){
+        tl.from(".video-container",{
+            opacity:0,
+            duration:.5,
+        },"-=.9")
+    }
+    
+
 }
-preloaderAnimation();
+// preloaderAnimation();
 
 function cursorAnimation() {
     var cursor = document.querySelector(".cursor");
@@ -352,7 +360,7 @@ function sheryAnimation() {
 }
 
 window.onload = () => {
-    sheryAnimation()
+    // sheryAnimation()
 };
 
 function videoCursorAnimation() {
@@ -445,7 +453,12 @@ function flagAnimation() {
         });
     });
 }
-flagAnimation();
+if(window.innerWidth >= 768){
+    flagAnimation();
+
+    window.addEventListener("resize", flagAnimation)
+}
+    
 
 function footerHeaderAnimation() {
     const headerElements = document.querySelectorAll(".footer-headers");
@@ -537,6 +550,9 @@ var pageNumberArray = [...pageNumbers]
 var projectCircles = document.querySelectorAll(".project-circle")
 var projectCircleArray = [...projectCircles]
 
+var projectCardDetails  = document.querySelectorAll(".project-card-details")
+var projectCardDetailArray = [...projectCardDetails]
+
 
 function fadeInGroupAnimation(fadeGroupTarget) {
     // gsap.set(pageNumbers,{opacity:})
@@ -544,13 +560,13 @@ function fadeInGroupAnimation(fadeGroupTarget) {
     let projectCircleStartValue = "top-=250vw center"
     fadeGroupTarget.map(function (target) {
         return gsap.from(target, {
-            y: target === pageNumberArray ? 7 : "",
+            y: fadeGroupTarget === pageNumberArray ? 7 : "",
             opacity: 0,
             scrollTrigger: {
                 trigger: target,
                 scroller: "body",
                 start: target === pageNumberArray ? pageNumberStartValue : projectCircleStartValue,
-                end: "bottom bottom"
+                end: "bottom bottom",
             }
         })
 
@@ -560,6 +576,7 @@ function fadeInGroupAnimation(fadeGroupTarget) {
 
 fadeInGroupAnimation(pageNumberArray)
 fadeInGroupAnimation(projectCircleArray)
+fadeInGroupAnimation(projectCardDetailArray)
 
 
 
@@ -577,6 +594,7 @@ function fadeInAnimation(fadeTarget) {
             scroller: "body",
             start: fadeTarget === ".marquee-paragraph" ? marqueeParagraphStartValue : fadeTarget === ".footer-header" ? footerHeaderStartValue : startValue,
             end: fadeTarget === ".footer-header" ? footerHeaderEndValue : '',
+            // markers:true,
         }
     })
 }
@@ -585,6 +603,7 @@ fadeInAnimation('.marquee-paragraph')
 fadeInAnimation('.footer-header')
 fadeInAnimation('.footer-info')
 fadeInAnimation('.copyright')
+fadeInAnimation(".about-img")
 
 
 function textAnimation(textTarget) {
@@ -603,19 +622,55 @@ textAnimation(".about-header  h1")
 
 
 let cardHeaders = document.querySelectorAll(".card-header")
+let socialLinks = document.querySelectorAll(".social-link")
 
-cardHeaders.forEach(function(cardHeader){
-    var header = cardHeader.querySelectorAll("h2")
-    cardHeader.addEventListener("mousemove",function(){
-        gsap.to(header,{
-            y: "-40px",
+function textHoverAnimation(textHoverTarget){
+    textHoverTarget.forEach(function(hoverTarget){
+        var headers = hoverTarget.querySelectorAll("h2")
+
+        hoverTarget.addEventListener("mousemove",function(){
+            gsap.to(headers,{
+                y: textHoverTarget === cardHeaders?"-40px":'-30px',
+            })
+        })
+        hoverTarget.addEventListener("mouseleave",function(){
+            gsap.to(headers,{
+                y: 0,
+            })
         })
     })
-    cardHeader.addEventListener("mouseleave",function(){
-        gsap.to(header,{
-            y: 0,
-        })
+}
+
+textHoverAnimation(cardHeaders)
+textHoverAnimation(socialLinks)
+
+var obysInfoPara = document.querySelector(".obys-info-para")
+var obysInfoPara2 = document.querySelectorAll(".obys-info-para-2")
+obysInfoPara.addEventListener("mousemove",function(){
+    console.log(obysInfoPara)
+
+    gsap.to(obysInfoPara2,{
+        y: window.innerWidth >=768?"-2vw":"-6.2vw",
+    })
+})
+obysInfoPara.addEventListener("mouseleave",function(){
+    gsap.to(obysInfoPara2,{
+        y: 0,
     })
 })
 
+cardHeaders.forEach(function(cardHeader){
+    var header = cardHeader.querySelector("h2")
+    gsap.from(header,{
+        y:"40px",
+        duration:.8,
+        scrollTrigger:{
+            scroller:"body",
+            trigger:header,
+            // markers:true,
+            start:"top-=400vw center",
+            end:"bottom bottom"
+        }
+    })
 
+})
