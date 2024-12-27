@@ -124,8 +124,12 @@ function preloaderAnimation() {
 }
 // preloaderAnimation();
 
-var links = document.querySelectorAll(".navPart4 a");
+
+
+
+
 var cursor = document.querySelector(".cursor");
+
 function cursorAnimation() {
     document.addEventListener("mousemove", function (dets) {
         gsap.to(cursor, {
@@ -138,7 +142,43 @@ function cursorAnimation() {
 }
 cursorAnimation();
 
+var links = document.querySelectorAll(".navPart4 a");
+var navIcon = document.querySelector(".navPart2 .navIcon")
+function MagnetEffectAnimation(magnetEffectTarget){
+    const targets = magnetEffectTarget.length !== undefined ? magnetEffectTarget : [magnetEffectTarget]
 
+    targets.forEach(function (magnetTarget) {
+        const dims = magnetTarget.getBoundingClientRect();
+        var x1 = dims.x;
+        var x2 = x1 + dims.width;
+        var y1 = dims.y;
+        var y2 = y1 + dims.height;
+        magnetTarget.addEventListener("mousemove", function (dets) {
+            var moveX = gsap.utils.mapRange(x1, x2, -15, 15, dets.clientX);
+            var moveY = gsap.utils.mapRange(y1, y2, -12, 15, dets.clientY);
+            gsap.to(cursor, {
+                scale: 1.2,
+            });
+            gsap.to(magnetTarget, {
+                x: moveX,
+                y: moveY,
+            });
+        });
+        magnetTarget.addEventListener("mouseleave", function () {
+            gsap.to(cursor, {
+                scale: 1,
+            });
+            gsap.to(magnetTarget, {
+                x: 0,
+                y: 0,
+            });
+        });
+    });
+}
+MagnetEffectAnimation(links)
+if(window.innerWidth >= 768){
+    MagnetEffectAnimation(navIcon)
+}
 
 function dynamicProjectContents() {
     const projectCardsData = [
@@ -598,7 +638,6 @@ textAnimation(".about-header  h1")
 
 let cardHeaders = document.querySelectorAll(".card-header")
 let projectCard = document.querySelectorAll(".project-cards")
-console.log(projectCard)
 let socialLinks = document.querySelectorAll(".social-link")
 
 function textHoverAnimation(textHoverTarget) {
