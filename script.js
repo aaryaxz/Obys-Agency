@@ -113,20 +113,20 @@ function preloaderAnimation() {
         },
         "-=1"
     );
-    if(window.innerWidth <768){
-        tl.from(".video-container",{
-            opacity:0,
-            duration:.5,
-        },"-=.9")
+    if (window.innerWidth < 768) {
+        tl.from(".video-container", {
+            opacity: 0,
+            duration: .5,
+        }, "-=.9")
     }
-    
+
 
 }
 // preloaderAnimation();
 
+var links = document.querySelectorAll(".navPart4 a");
+var cursor = document.querySelector(".cursor");
 function cursorAnimation() {
-    var cursor = document.querySelector(".cursor");
-    var links = document.querySelectorAll(".navPart4 a");
     document.addEventListener("mousemove", function (dets) {
         gsap.to(cursor, {
             left: dets.x,
@@ -135,35 +135,10 @@ function cursorAnimation() {
         });
     });
 
-    links.forEach(function (link) {
-        const dims = link.getBoundingClientRect();
-        var x1 = dims.x;
-        var x2 = x1 + dims.width;
-        var y1 = dims.y;
-        var y2 = y1 + dims.height;
-        link.addEventListener("mousemove", function (dets) {
-            var moveX = gsap.utils.mapRange(x1, x2, -15, 15, dets.clientX);
-            var moveY = gsap.utils.mapRange(y1, y2, -12, 15, dets.clientY);
-            gsap.to(cursor, {
-                scale: 1.2,
-            });
-            gsap.to(link, {
-                x: moveX,
-                y: moveY,
-            });
-        });
-        link.addEventListener("mouseleave", function () {
-            gsap.to(cursor, {
-                scale: 1,
-            });
-            gsap.to(link, {
-                x: 0,
-                y: 0,
-            });
-        });
-    });
 }
 cursorAnimation();
+
+
 
 function dynamicProjectContents() {
     const projectCardsData = [
@@ -260,10 +235,10 @@ function dynamicProjectContents() {
             project_card_index
         ) {
             const project_card = `
-                    <div class="project-card-${project_card_index} relative w-full w-full lg:w-[${width}vw] lg:mt-[${marginTop}vw] h-fit ">
-                        <div class="card-header overflow-hidden  h-[40px]">
-                            <h2 class=" text-[6vw] md:text-[2.7vw] mt-[18vw] lg:mt-[0]   leading-none font-[plain-regular]">${cardHeading}</h2>
-                            <h2 class=" text-[6vw] md:text-[2.7vw] mt-[18vw] lg:mt-[0]   leading-none font-[plain-regular]">${cardHeading}</h2>
+                    <div class="project-card-${project_card_index} project-cards relative w-full w-full lg:w-[${width}vw] lg:mt-[${marginTop}vw] h-fit ">
+                        <div class="card-header overflow-hidden mt-[18vw] lg:mt-[0]  leading-none h-[22px] lg:h-[40px]">
+                            <h2 class=" text-[6vw] md:text-[2.7vw]    leading-none font-[plain-regular]">${cardHeading}</h2>
+                            <h2 class=" text-[6vw] md:text-[2.7vw]  leading-none font-[plain-regular]">${cardHeading}</h2>
                         </div>
 
                         <div class="project-card-img bg-amber-500 w-full mt-[7vw] mb-[5vw] md:mt-[3vw] md:mb-[2vw] h-[62vh] md:h-[60vw] lg:h-[${height}vw] relative">
@@ -453,12 +428,12 @@ function flagAnimation() {
         });
     });
 }
-if(window.innerWidth >= 768){
+if (window.innerWidth >= 768) {
     flagAnimation();
 
     window.addEventListener("resize", flagAnimation)
 }
-    
+
 
 function footerHeaderAnimation() {
     const headerElements = document.querySelectorAll(".footer-headers");
@@ -550,7 +525,7 @@ var pageNumberArray = [...pageNumbers]
 var projectCircles = document.querySelectorAll(".project-circle")
 var projectCircleArray = [...projectCircles]
 
-var projectCardDetails  = document.querySelectorAll(".project-card-details")
+var projectCardDetails = document.querySelectorAll(".project-card-details")
 var projectCardDetailArray = [...projectCardDetails]
 
 
@@ -622,55 +597,81 @@ textAnimation(".about-header  h1")
 
 
 let cardHeaders = document.querySelectorAll(".card-header")
+let projectCard = document.querySelectorAll(".project-cards")
+console.log(projectCard)
 let socialLinks = document.querySelectorAll(".social-link")
 
-function textHoverAnimation(textHoverTarget){
-    textHoverTarget.forEach(function(hoverTarget){
+function textHoverAnimation(textHoverTarget) {
+    textHoverTarget.forEach(function (hoverTarget) {
         var headers = hoverTarget.querySelectorAll("h2")
-
-        hoverTarget.addEventListener("mousemove",function(){
-            gsap.to(headers,{
-                y: textHoverTarget === cardHeaders?"-40px":'-30px',
+        hoverTarget.addEventListener("mousemove", function () {
+            const yValue = window.innerWidth < 768 && textHoverTarget === socialLinks ? "-26px" : textHoverTarget === projectCard ? window.innerWidth < 768 ? "-24px" : "-40px" : "-31px";
+            gsap.to(headers, {
+                y: yValue,
             })
         })
-        hoverTarget.addEventListener("mouseleave",function(){
-            gsap.to(headers,{
+        hoverTarget.addEventListener("mouseleave", function () {
+            gsap.to(headers, {
                 y: 0,
             })
         })
     })
 }
 
-textHoverAnimation(cardHeaders)
+textHoverAnimation(projectCard)
 textHoverAnimation(socialLinks)
 
 var obysInfoPara = document.querySelector(".obys-info-para")
 var obysInfoPara2 = document.querySelectorAll(".obys-info-para-2")
-obysInfoPara.addEventListener("mousemove",function(){
+obysInfoPara.addEventListener("mousemove", function () {
     console.log(obysInfoPara)
 
-    gsap.to(obysInfoPara2,{
-        y: window.innerWidth >=768?"-2vw":"-6.2vw",
+    gsap.to(obysInfoPara2, {
+        y: window.innerWidth >= 768 ? "-2.1vw" : "-6.8vw",
     })
 })
-obysInfoPara.addEventListener("mouseleave",function(){
-    gsap.to(obysInfoPara2,{
+obysInfoPara.addEventListener("mouseleave", function () {
+    gsap.to(obysInfoPara2, {
         y: 0,
     })
 })
 
-cardHeaders.forEach(function(cardHeader){
+cardHeaders.forEach(function (cardHeader) {
     var header = cardHeader.querySelector("h2")
-    gsap.from(header,{
-        y:"40px",
-        duration:.8,
-        scrollTrigger:{
-            scroller:"body",
-            trigger:header,
+    gsap.from(header, {
+        y: "40px",
+        duration: .8,
+        scrollTrigger: {
+            scroller: "body",
+            trigger: header,
             // markers:true,
-            start:"top-=400vw center",
-            end:"bottom bottom"
+            start: "top-=400vw center",
+            end: "bottom bottom"
         }
     })
 
 })
+
+const heroSection = document.querySelector(".hero-section")
+const aboutPageNumber = document.querySelector(".aboutPageNumber")
+const ourProjectHeader = document.querySelector(".our-projects-header ")
+function scrollAnimation(scrollPageTarget) {
+
+    const scrollSpeed1 = window.innerWidth <= 768 ? .1 : .3;
+    const scrollSpeed2 = window.innerWidth <= 768 ? .03 : .08;
+
+    if (scrollPageTarget == heroSection) {
+        scrollPageTarget.setAttribute("data-scroll-speed", scrollSpeed1)
+    } else {
+        scrollPageTarget.setAttribute("data-scroll-speed", scrollSpeed2)
+    }
+}
+scrollAnimation(heroSection)
+scrollAnimation(aboutPageNumber)
+scrollAnimation(ourProjectHeader)
+window.addEventListener('resize', function () {
+    scrollAnimation(heroSection)
+    scrollAnimation(aboutPageNumber)
+    scrollAnimation(ourProjectHeader)
+})
+
