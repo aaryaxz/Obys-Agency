@@ -372,7 +372,7 @@ function sheryAnimation() {
 }
 
 window.onload = () => {
-    // sheryAnimation()
+    sheryAnimation()
 };
 
 function videoCursorAnimation() {
