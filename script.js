@@ -122,10 +122,7 @@ function preloaderAnimation() {
 
 
 }
-// preloaderAnimation();
-
-
-
+preloaderAnimation();
 
 
 var cursor = document.querySelector(".cursor");
@@ -592,8 +589,6 @@ function fadeInGroupAnimation(fadeGroupTarget) {
 fadeInGroupAnimation(pageNumberArray)
 fadeInGroupAnimation(projectCircleArray)
 fadeInGroupAnimation(projectCardDetailArray)
-
-
 
 function fadeInAnimation(fadeTarget) {
     let startValue = "top-=300vw center"
