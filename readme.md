@@ -6,7 +6,7 @@
 
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-0057B4.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![GSAP](https://img.shields.io/badge/gsap-88CE02.svg?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
-[![Lenis](https://img.shields.io/badge/lenis-000000.svg?style=for-the-badge&logo=scroll&logoColor=white)](https://github.com/studio-freight/lenis)
+[![Locomotive Js](https://img.shields.io/badge/Locomotive_js-000000.svg?style=for-the-badge&logo=scroll&logoColor=white)](https://scroll.locomotive.ca/docs#/?id=locomotive-scroll-v5)
 </div>
 
 
