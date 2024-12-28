@@ -41,12 +41,11 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-<p align="center">Made with ❤️ and probably too much ☕</p>
-
-<p align="center">
+<div align="center">
+Made with ❤️ and probably too much ☕
 
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aaryaxz)
 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2&color=0D76E3)](https://www.linkedin.com/in/aaradhya-singh-747595322/)
 
-</p>
+</div>
