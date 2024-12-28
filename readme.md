@@ -2,35 +2,23 @@
 
 <p align="center"><strong>A modern web experience built with clean animations, responsive design, and interactive elements that work together to create something both beautiful and functional. ✨</strong> </p>
 
-<hr style="border: 1px solid #ccc;" />
+---
 
 
-<button class="px-6 py-2 text-white bg-green-500 hover:bg-green-600 rounded-lg transition duration-300 ease-in-out">
-    JS
-</button>
+<p align="center">
 
-<button href="#" class="inline-block px-6 py-2 text-white bg-blue-500 hover:bg-blue-600 rounded-lg transition duration-300 ease-in-out">
-  GSAP 
-</button>
+  [![TailwindCSS](https://img.shields.io/badge/tailwindcss-0057B4.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-<button href="#" class="inline-block px-6 py-2 text-white bg-green-500 hover:bg-green-600 rounded-lg transition duration-300 ease-in-out">
-  Tailwind 
-</button>
+  [![GSAP](https://img.shields.io/badge/gsap-88CE02.svg?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
 
-<button href="#" class="inline-block px-6 py-2 text-white bg-purple-500 hover:bg-purple-600 rounded-lg transition duration-300 ease-in-out">
-  Lenis 
-</button>
+  [![Lenis](https://img.shields.io/badge/lenis-000000.svg?style=for-the-badge&logo=scroll&logoColor=white)](https://github.com/studio-freight/lenis)
+</p>
 
-<hr style="border: 1px solid #ccc;" />
+---
 
 
 ## ⚡ Try it Live
-
-<button href="#" class="inline-block px-6 py-2 text-white bg-purple-500 hover:bg-purple-600 rounded-lg transition duration-300 ease-in-out">
-  Live Demo
-</button>
-
-<hr style="border: 1px solid #ccc;" />
+[![Get Started](https://img.shields.io/badge/Launch_Now-FFA63D?style=for-the-badge&logoColor=fff&labelColor=4332d1)](https://aaryaxz.github.io/Obys-Agency/)
 
 
 ## ✨ **Features**
@@ -41,9 +29,6 @@
 - 🎬 **Sleek Video Player** – A polished, interactive video player for a modern feel.
 - 📱 **Mobile-First Design** – Fully responsive layout for all screen sizes.
 
-<hr style="border: 1px solid #ccc;" />
-
-
 ## 🛠️ **Tech Stack**
 
 - **HTML**
@@ -52,27 +37,26 @@
 - **GSAP**
 - **Shery.js**
 
-<hr style="border: 1px solid #ccc;" />
-
-
 ## 🌟 **Credits**
 
 This project is inspired by the creative work of Obys Agency. I had fun recreating the design and adding my own twists!
 
-<hr style="border: 1px solid #ccc;" />
-
-
 ## 📝 **License**
 
-This project is licensed under the **MIT License**. See the LICENSE file for details.
+
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-<p align="center">*Made with ❤️ and probably too much ☕*</p>
+<p align="center">Made with ❤️ and probably too much ☕</p>
 
-<button href="#" align='center' class="inline-block px-6 py-2 text-white bg-purple-500 hover:bg-purple-600 rounded-lg transition duration-300 ease-in-out">
-  Github
-</button>
-<button href="#" align='center' class="inline-block px-6 py-2 text-white bg-purple-500 hover:bg-purple-600 rounded-lg transition duration-300 ease-in-out">
-  LinekdIn
-</button>
+
+<p align="center">
+
+
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aaryaxz)
+
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2&color=0D76E3)](https://www.linkedin.com/in/aaradhya-singh-747595322/)
+
+</p>
