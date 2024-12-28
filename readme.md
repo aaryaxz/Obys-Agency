@@ -1,23 +1,17 @@
-<h1 align="center">🚀 Obys Agency</h1>
+<div align="center">
 
-<p align="center"><strong>A modern web experience built with clean animations, responsive design, and interactive elements that work together to create something both beautiful and functional. ✨</strong> </p>
+# 🚀 Obys Agency
 
----
+<strong>A modern web experience built with clean animations, responsive design, and interactive elements that work together to create something both beautiful and functional. ✨</strong>
 
-
-<p align="center">
-
-  [![TailwindCSS](https://img.shields.io/badge/tailwindcss-0057B4.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-
-  [![GSAP](https://img.shields.io/badge/gsap-88CE02.svg?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
-
-  [![Lenis](https://img.shields.io/badge/lenis-000000.svg?style=for-the-badge&logo=scroll&logoColor=white)](https://github.com/studio-freight/lenis)
-</p>
-
----
+[![TailwindCSS](https://img.shields.io/badge/tailwindcss-0057B4.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![GSAP](https://img.shields.io/badge/gsap-88CE02.svg?style=for-the-badge&logo=greensock&logoColor=white)](https://greensock.com/gsap/)
+[![Lenis](https://img.shields.io/badge/lenis-000000.svg?style=for-the-badge&logo=scroll&logoColor=white)](https://github.com/studio-freight/lenis)
+</div>
 
 
 ## ⚡ Try it Live
+
 [![Get Started](https://img.shields.io/badge/Launch_Now-FFA63D?style=for-the-badge&logoColor=fff&labelColor=4332d1)](https://aaryaxz.github.io/Obys-Agency/)
 
 
@@ -43,17 +37,13 @@ This project is inspired by the creative work of Obys Agency. I had fun recreati
 
 ## 📝 **License**
 
-
-
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
 <p align="center">Made with ❤️ and probably too much ☕</p>
 
-
 <p align="center">
-
 
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aaryaxz)
 
