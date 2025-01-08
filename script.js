@@ -371,26 +371,13 @@ function sheryAnimation() {
     });
 }
 
-let isSheryActive = false;
-
-function toggleSheryAnimation() {
-    const isDesktop = window.innerWidth >= 768;
-    
-    // Enable Shery on desktop only
-    if (isDesktop && !isSheryActive) {
+if (window.innerWidth >= 768) {
+    window.onload = function(){
         sheryAnimation();
-        isSheryActive = true;
     }
 }
 
-// Run on page load
-toggleSheryAnimation();
 
-// Handle window resize
-window.addEventListener('resize', () => {
-    // Wait for resize to finish before checking
-    setTimeout(toggleSheryAnimation, 250);
-});
 function videoCursorAnimation() {
     var vidInnerContainer = document.querySelector(".video-inner-container");
     var vid = document.querySelector(".video-inner-container video");
